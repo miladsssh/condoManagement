@@ -1,15 +1,5 @@
 <!DOCTYPE html>
-<!-- 
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
-Version: 3.2.0
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
+
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
@@ -18,7 +8,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Metronic | Admin Dashboard Template</title>
+<title>Admin Dashboard Template</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="" name="description"/>
@@ -60,6 +50,8 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
 <!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
 <!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+
+
 <body class="page-boxed page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo">
 <!-- BEGIN HEADER -->
 <div class="page-header navbar navbar-fixed-top">
@@ -67,7 +59,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<div class="page-header-inner container">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="index.html">
+			<a href="index">
 			<img src="../../assets/admin/layout2/img/logo-default.png" alt="logo" class="logo-default"/>
 			</a>
 			<div class="menu-toggler sidebar-toggler">
@@ -369,150 +361,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						</ul>
 					</li>
 					<!-- END INBOX DROPDOWN -->
-					<!-- BEGIN TODO DROPDOWN -->
-					<li class="dropdown dropdown-extended dropdown-tasks" id="header_task_bar">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						<i class="icon-calendar"></i>
-						<span class="badge badge-success">
-						3 </span>
-						</a>
-						<ul class="dropdown-menu extended tasks">
-							<li>
-								<p>
-									 You have 12 pending tasks
-								</p>
-							</li>
-							<li>
-								<ul class="dropdown-menu-list scroller" style="height: 250px;">
-									<li>
-										<a href="page_todo.html">
-										<span class="task">
-										<span class="desc">
-										New release v1.2 </span>
-										<span class="percent">
-										30% </span>
-										</span>
-										<div class="progress">
-											<div style="width: 40%;" class="progress-bar progress-bar-success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-												<div class="sr-only">
-													 40% Complete
-												</div>
-											</div>
-										</div>
-										</a>
-									</li>
-									<li>
-										<a href="page_todo.html">
-										<span class="task">
-										<span class="desc">
-										Application deployment </span>
-										<span class="percent">
-										65% </span>
-										</span>
-										<div class="progress progress-striped">
-											<div style="width: 65%;" class="progress-bar progress-bar-danger" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-												<div class="sr-only">
-													 65% Complete
-												</div>
-											</div>
-										</div>
-										</a>
-									</li>
-									<li>
-										<a href="page_todo.html">
-										<span class="task">
-										<span class="desc">
-										Mobile app release </span>
-										<span class="percent">
-										98% </span>
-										</span>
-										<div class="progress">
-											<div style="width: 98%;" class="progress-bar progress-bar-success" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
-												<div class="sr-only">
-													 98% Complete
-												</div>
-											</div>
-										</div>
-										</a>
-									</li>
-									<li>
-										<a href="page_todo.html">
-										<span class="task">
-										<span class="desc">
-										Database migration </span>
-										<span class="percent">
-										10% </span>
-										</span>
-										<div class="progress progress-striped">
-											<div style="width: 10%;" class="progress-bar progress-bar-warning" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-												<div class="sr-only">
-													 10% Complete
-												</div>
-											</div>
-										</div>
-										</a>
-									</li>
-									<li>
-										<a href="page_todo.html">
-										<span class="task">
-										<span class="desc">
-										Web server upgrade </span>
-										<span class="percent">
-										58% </span>
-										</span>
-										<div class="progress progress-striped">
-											<div style="width: 58%;" class="progress-bar progress-bar-info" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100">
-												<div class="sr-only">
-													 58% Complete
-												</div>
-											</div>
-										</div>
-										</a>
-									</li>
-									<li>
-										<a href="page_todo.html">
-										<span class="task">
-										<span class="desc">
-										Mobile development </span>
-										<span class="percent">
-										85% </span>
-										</span>
-										<div class="progress progress-striped">
-											<div style="width: 85%;" class="progress-bar progress-bar-success" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-												<div class="sr-only">
-													 85% Complete
-												</div>
-											</div>
-										</div>
-										</a>
-									</li>
-									<li>
-										<a href="page_todo.html">
-										<span class="task">
-										<span class="desc">
-										New UI release </span>
-										<span class="percent">
-										18% </span>
-										</span>
-										<div class="progress progress-striped">
-											<div style="width: 18%;" class="progress-bar progress-bar-important" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100">
-												<div class="sr-only">
-													 18% Complete
-												</div>
-											</div>
-										</div>
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li class="external">
-								<a href="page_todo.html">
-								See all tasks <i class="icon-arrow-right"></i>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<!-- END TODO DROPDOWN -->
+
+
 					<!-- BEGIN QUICK SIDEBAR TOGGLER -->
 					<li class="dropdown dropdown-quick-sidebar-toggler hide">
 						<a href="javascript:;" class="dropdown-toggle">
@@ -721,16 +571,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<a href="#">Dashboard</a>
 						</li>
 					</ul>
-					<div class="page-toolbar">
-						<div id="dashboard-report-range" class="tooltips btn btn-fit-height btn-sm green-haze btn-dashboard-daterange" data-container="body" data-placement="left" data-original-title="Change dashboard date range">
-							<i class="icon-calendar"></i>
-							&nbsp;&nbsp; <i class="fa fa-angle-down"></i>
-							<!-- uncomment this to display selected daterange in the button 
-&nbsp; <span class="thin uppercase visible-lg-inline-block"></span>&nbsp;
-<i class="fa fa-angle-down"></i>
- -->
-						</div>
-					</div>
+
 				</div>
 				<!-- END PAGE HEADER-->
 				<!-- BEGIN DASHBOARD STATS -->

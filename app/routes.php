@@ -16,7 +16,7 @@ Route::get('/', function()
 	return View::make('login');
 });
 
-Route::post('/index', function()
+Route::any('/index', function()
 {
 	return View::make('index');
 });
