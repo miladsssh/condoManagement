@@ -48,9 +48,15 @@
 <body class="login">
 <!-- BEGIN LOGO -->
 <div class="logo">
-	<a href="index.html">
-	<img src="../../assets/admin/layout2/img/logo-big.png" alt=""/>
-	</a>
+	<!-- 	
+		<a href="index.html">
+			<img src="../../assets/admin/layout2/img/logo-big.png" alt=""/>
+		</a> 
+	-->
+	<h3 style="font-weight: bold;">
+		<span style="color:white">Condo</span>
+		<span style="color:rgb(255, 107, 0)">Management</span>
+	</h3>
 </div>
 <!-- END LOGO -->
 <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
@@ -491,7 +497,7 @@
 <!-- END LOGIN -->
 <!-- BEGIN COPYRIGHT -->
 <div class="copyright">
-	 2014 &copy; Metronic. Admin Dashboard Template.
+	 2014 &copy; Cygnuslab.
 </div>
 <!-- END COPYRIGHT -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
