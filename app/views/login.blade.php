@@ -99,11 +99,11 @@
 			<h4>Or login with</h4>
 			<ul class="social-icons">
 				<li>
-					<a class="facebook" data-original-title="facebook" href="#">
+					<a class="facebook" data-original-title="facebook" href="/anvard/login/Facebook">
 					</a>
 				</li>
 				<li>
-					<a class="twitter" data-original-title="Twitter" href="#">
+					<a class="twitter" data-original-title="Twitter" href="/anvard/login/Twitter">
 					</a>
 				</li>
 				<li>

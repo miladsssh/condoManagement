@@ -13,13 +13,13 @@ return array(
 
         'Facebook' => array (
             'enabled' => true,
-            'keys'    => array ( 'id' => '', 'secret' => '' ),
+            'keys'    => array ( 'id' => '727312697354174', 'secret' => '0928cb20f999c92c2b0ad120151ad356' ),
             "scope"   => "email, user_about_me, user_birthday, user_hometown, user_website, offline_access, read_stream, publish_stream, read_friendlists", // optional
         ),
 
         'Twitter' => array (
             'enabled' => true,
-            'keys'    => array ( 'key' => '', 'secret' => '' )
+            'keys'    => array ( 'key' => 'B0oud9QDzYfP7zEIjzjaRcaoV', 'secret' => 'iLRc2dDlq76a7fw4Sm9I1MFWkTeRKwTSSCcoCVxGAv46ClxhZx' )
         ),
 
         'LinkedIn' => array (
