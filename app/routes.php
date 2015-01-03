@@ -11,10 +11,17 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('login');
-});
+
+
+Route::get ('/', array('as'=>'home', 'uses'=>'HomeController@showWelcome'));
+
+
+Route::post('/register', array('as'=>'homeToRegister', 'uses'=>'UserController@store' ));
+Route::post('/login', array('as'=>'homeToLogin', 'uses'=>'UserController@login' ));
+Route::post('/forgetPassword', array('as'=>'homeToForget', 'uses'=>'UserController@forget' ));
+Route::get ('logout', array('as'=>'Logout', 'uses'=>'UserController@destroy'));
+
+Route::post('/adminDashboard', array('as'=>'adminPanel', 'uses'=>''));
 
 Route::any('/index', function()
 {

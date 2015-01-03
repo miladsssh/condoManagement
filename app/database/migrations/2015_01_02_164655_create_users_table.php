@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration {
 			$table->string('post_code', 45);
 			$table->integer('active');
 			$table->timestamps();
+			$table->rememberToken();
 		});
 	}
 

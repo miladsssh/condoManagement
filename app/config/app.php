@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -121,9 +121,10 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Atticmedia\Anvard\AnvardServiceProvider',
-		'Way\Generators\GeneratorsServiceProvider'
-
+		'Way\Generators\GeneratorsServiceProvider',
+		'Laracasts\Commander\CommanderServiceProvider',
+		'Laracasts\Validation\ValidationServiceProvider',
+		'Sebklaus\Profiler\Providers\ProfilerServiceProvider',
 	),
 
 	/*

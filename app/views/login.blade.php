@@ -38,6 +38,7 @@
 
 <div class="content">
 
+	@include('partials.errors')
 	@include('partials.forms.forgetPassword')
 	@include('partials.forms.login')
 	@include('partials.forms.register')

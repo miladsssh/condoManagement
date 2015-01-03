@@ -1,4 +1,4 @@
-<form class="forget-form" action="index.html" method="post">
+{{ Form::open(array('route'=>'homeToForget','class="forget-form"')) }}
     <h3>Forget Password ?</h3>
     <p>
         Enter your e-mail address below to reset your password.

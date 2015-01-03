@@ -83,11 +83,6 @@ Login page
   padding-bottom: 20px;
 }
 
-.login .content .register-form .form-actions {
-  border: 0;
-  margin-bottom: 0;
-  padding-bottom: 0px;
-}
 
 .login .content .form-actions .checkbox {
   margin-top: 8px;
