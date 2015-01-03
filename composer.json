@@ -8,6 +8,9 @@
 		"laravel/framework": "4.2.*",
 		"atticmedia/anvard": "dev-master"
 	},
+	"require-dev": {
+	  "way/generators": "~
+	},
 	"autoload": {
 		"classmap": [
 			"app/commands",

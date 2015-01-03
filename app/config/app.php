@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => '7Q17uuhwreXcicRmqrnsthh0soxOhHEe',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -122,6 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Atticmedia\Anvard\AnvardServiceProvider',
+		'Way\Generators\GeneratorsServiceProvider'
 
 	),
 
