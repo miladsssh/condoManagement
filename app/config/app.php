@@ -123,8 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
 		'Laracasts\Commander\CommanderServiceProvider',
-		'Laracasts\Validation\ValidationServiceProvider',
-		'Sebklaus\Profiler\Providers\ProfilerServiceProvider',
+		'Laracasts\Validation\ValidationServiceProvider'
 	),
 
 	/*

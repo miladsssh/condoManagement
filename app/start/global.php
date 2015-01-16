@@ -53,7 +53,14 @@ App::error(function(Exception $exception, $code)
 
 App::error(function(Laracasts\Validation\FormValidationException $exception, $code)
 {
-	return Redirect::back()->withInput()->withErrors($exception->getErrors());
+	 return Cygnus\Core\CygnusResponse::sendJsonMessage($exception->getErrors(),400);
+	//return Redirect::back()->withInput()->withErrors($exception->getErrors());
+});
+
+
+App::error(function(Illuminate\Database\Eloquent\ModelNotFoundException $exception, $code)
+{
+	return Cygnus\Core\CygnusResponse::sendJsonMessage('no result',400);
 });
 
 /*

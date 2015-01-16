@@ -8,6 +8,7 @@ use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 use Eloquent,Hash;
 
+
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
@@ -35,10 +36,22 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	}
 
 
+	/**
+	 * @return mixed
+     */
+//	public function condos(){
+//		return $this->hasMany('user_condominiums');
+//	}
+
+
 	public static function register($email,$password) {
 		$user = new static(compact('email','password'));
 		return $user;
 		//raise event
+	}
+
+	public function condo(){
+		return $this->belongsToMany('Cygnus\Repo\Condominium\Condominium','user_condominiums');
 	}
 
 }

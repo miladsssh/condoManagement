@@ -35,16 +35,10 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
+	Auth::loginUsingId(1);
 	if (Auth::guest())
 	{
-		if (Request::ajax())
-		{
-			return Response::make('Unauthorized', 401);
-		}
-		else
-		{
-			return Redirect::guest('login');
-		}
+		return \Cygnus\Core\CygnusResponse::sendJsonMessage('Unauthorized Access', 400);
 	}
 });
 

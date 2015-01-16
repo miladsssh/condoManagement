@@ -4,10 +4,15 @@ use Cygnus\Commands\User\UserRegisterCommand;
 use Cygnus\Forms\UserLoginValidation;
 use Cygnus\Forms\UserRegistrationValidation;
 use Cygnus\Core\CommandBus;
+use Cygnus\Core\CygnusResponse;
 
+/**
+ * Class UserController
+ */
 class UserController extends BaseController {
 
 	use CommandBus;
+	use CygnusResponse;
 
 	/**
 	 * @var UserRegistrationValidation
@@ -19,8 +24,7 @@ class UserController extends BaseController {
 	private $userLoginValidation;
 
 
-	public function __construct(UserRegistrationValidation $userRegistrationValidation,
-								UserLoginValidation $userLoginValidation ){
+	public function __construct(UserRegistrationValidation $userRegistrationValidation, UserLoginValidation $userLoginValidation ){
 		$this->userRegistrationValidation = $userRegistrationValidation;
 		$this->userLoginValidation = $userLoginValidation;
 	}
@@ -39,10 +43,16 @@ class UserController extends BaseController {
 			new UserRegisterCommand($email,$password)
 		);
 		Auth::login($user);
-		return Redirect::home();
+		//all the message
+		return $this->sendJsonMessage('success',200);
+
 	}
 
 
+	/**
+	 * @return mixed
+	 * @throws \Laracasts\Validation\FormValidationException
+     */
 	public function login()
 	{
 		$formData = Input::only('email','password');
@@ -53,9 +63,9 @@ class UserController extends BaseController {
 			$remember = true;
 
 		if(Auth::attempt($formData,$remember)) {
-			return Redirect::intended('/index');
+			return $this->sendJsonMessage('success',200);
 		}else{
-			return Redirect::home();
+			return $this->sendJsonMessage('error',400);
 		}
 
 	}
@@ -67,10 +77,13 @@ class UserController extends BaseController {
 	}
 
 
+	/**
+	 * @return mixed
+     */
 	public function destroy()
 	{
 		Auth::logout();
-		return Redirect::home();
+		return $this->sendJsonMessage('success',200);
 	}
 
 
