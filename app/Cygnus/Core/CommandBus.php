@@ -5,13 +5,9 @@
  * Date: 1/3/15
  * Time: 11:59 PM
  */
-
 namespace Cygnus\Core;
-
 use App;
-
 trait CommandBus {
-
     /**
      * Execute the Command
      *
@@ -22,7 +18,6 @@ trait CommandBus {
     {
         return $this->getCommandBus()->execute($command);
     }
-
     /**
      * Fetch the Command Bus
      *
@@ -30,11 +25,6 @@ trait CommandBus {
      */
     public function getCommandBus()
     {
-       return App::make('Laracasts\Commander\CommandBus');
+        return App::make('Laracasts\Commander\CommandBus');
     }
-
-
-
-
-
 }

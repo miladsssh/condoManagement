@@ -12,6 +12,12 @@ namespace Cygnus\Repo\User;
 class UserRepo implements UserRepoInterface
 {
 
+    /**
+     * Register a new User
+     *
+     * @param User $user
+     * @return mixed
+     */
     public function save(User $user){
         return $user->save();
     }

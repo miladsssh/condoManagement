@@ -13,6 +13,9 @@ use Laracasts\Validation\FormValidator;
 
 class UserLoginValidation extends FormValidator {
 
+    /**
+     * @var array
+     */
     protected $rules = [
         'email'  => 'required|email',
         'password' => 'required'

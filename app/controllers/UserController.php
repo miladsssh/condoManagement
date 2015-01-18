@@ -3,7 +3,6 @@
 use Cygnus\Commands\User\UserRegisterCommand;
 use Cygnus\Forms\UserLoginValidation;
 use Cygnus\Forms\UserRegistrationValidation;
-use Cygnus\Core\CommandBus;
 use Cygnus\Core\CygnusResponse;
 
 /**
@@ -11,7 +10,6 @@ use Cygnus\Core\CygnusResponse;
  */
 class UserController extends BaseController {
 
-	use CommandBus;
 	use CygnusResponse;
 
 	/**
@@ -24,6 +22,10 @@ class UserController extends BaseController {
 	private $userLoginValidation;
 
 
+	/**
+	 * @param UserRegistrationValidation $userRegistrationValidation
+	 * @param UserLoginValidation $userLoginValidation
+     */
 	public function __construct(UserRegistrationValidation $userRegistrationValidation, UserLoginValidation $userLoginValidation ){
 		$this->userRegistrationValidation = $userRegistrationValidation;
 		$this->userLoginValidation = $userLoginValidation;
@@ -38,10 +40,8 @@ class UserController extends BaseController {
 	public function store()
 	{
 		$this->userRegistrationValidation->validate( Input::all() );
-		extract(Input::only('email','password'));
-		$user = $this->execute(
-			new UserRegisterCommand($email,$password)
-		);
+
+		$user = $this->execute(UserRegisterCommand::class);
 		Auth::login($user);
 		//all the message
 		return $this->sendJsonMessage('success',200);

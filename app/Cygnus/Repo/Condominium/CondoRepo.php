@@ -11,10 +11,16 @@ namespace Cygnus\Repo\Condominium;
 
 use Cygnus\Repo\User\User;
 
-class CondoRepo implements CondoRepoInterface
+/**
+ * Class CondoRepo
+ * @package Cygnus\Repo\Condominium
+ */
+class CondoRepo implements CondoRepoInterface, CondoRepoInterface
 {
 
     /**
+     * Register a New Condo
+     *
      * @param Condominium $condo
      * @param $userId
      * @return mixed
@@ -25,12 +31,38 @@ class CondoRepo implements CondoRepoInterface
     }
 
 
-    public function update(Condominium $condo, $condoId)
+    /**
+     * Update a Condo
+     *
+     * @param $name
+     * @param $condoId
+     */
+    public function update($name, $condoId)
     {
-        dd($condo->findOrfail($condoId));
+        $currentCondo = self::getCondoById($condoId);
+        $currentCondo->name = $name;
+        $currentCondo->save();
     }
 
+
     /**
+     * Delete a Condo
+     *
+     * @param $condoId
+     */
+    public static function delete($condoId)
+    {
+        $currentCondo = self::getCondoById($condoId);
+        $currentCondo->user()->detach();
+        $currentCondo->delete();
+    }
+
+
+
+    /**
+     * This function use in CondoRepo
+     * Want to send All Condo related to User
+     *
      * @param User $user
      * @return mixed
      */
@@ -38,7 +70,11 @@ class CondoRepo implements CondoRepoInterface
         return $user->condo()->get();
     }
 
+
+
     /**
+     * Get Condo By Id
+     *
      * @param $condoId
      * @return mixed
      */

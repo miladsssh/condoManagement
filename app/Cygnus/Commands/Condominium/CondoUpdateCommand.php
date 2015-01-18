@@ -11,13 +11,24 @@ namespace Cygnus\Commands\Condominium;
 
 class CondoUpdateCommand {
 
-    public $name;
-    public $id;
 
-    function __construct($id, $name)
+    /**
+     * @var
+     */
+    public $name;
+    /**
+     * @var
+     */
+    public $condoId;
+
+    /**
+     * @param $name
+     * @param $condoId
+     */
+    function __construct($name, $condoId)
     {
+        $this->condoId = $condoId;
         $this->name = $name;
-        $this->id = $id;
     }
 
 }

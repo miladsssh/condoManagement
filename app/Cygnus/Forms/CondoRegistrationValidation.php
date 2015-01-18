@@ -13,6 +13,9 @@ use Laracasts\Validation\FormValidator;
 
 class CondoRegistrationValidation extends FormValidator {
 
+    /**
+     * @var array
+     */
     protected $rules = [
         'name'  => 'required',
     ];

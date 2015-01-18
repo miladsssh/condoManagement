@@ -13,6 +13,9 @@ use Laracasts\Validation\FormValidator;
 
 class UserRegistrationValidation extends FormValidator {
 
+    /**
+     * @var array
+     */
     protected $rules = [
         'email'  => 'required|unique:users',
         'password' => 'required|confirmed'

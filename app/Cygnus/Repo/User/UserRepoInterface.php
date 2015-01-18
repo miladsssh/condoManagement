@@ -9,5 +9,11 @@ namespace Cygnus\Repo\User;
 
 interface UserRepoInterface
 {
+    /**
+     * Register a new User
+     *
+     * @param User $user
+     * @return mixed
+     */
     public function save(User $user);
 }

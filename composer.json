@@ -11,7 +11,8 @@
 	  "way/generators": "~2.0",
 	  "laracasts/validation": "~1.0",
 	  "laracasts/commander": "~1.0",
-	  "sebklaus/profiler" : "dev-master"
+	  "sebklaus/profiler" : "dev-master",
+	  "phpdocumentor/phpdocumentor": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

@@ -31,27 +31,37 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $hidden = array('password', 'remember_token');
 
 
+	/**
+	 * @param $password
+     */
 	protected function setPasswordAttribute($password) {
 		$this->attributes['password'] = Hash::make($password);
 	}
 
 
 	/**
+	 * The Relation is Many To Many
+	 * Each User can have many condo
+	 *
 	 * @return mixed
      */
-//	public function condos(){
-//		return $this->hasMany('user_condominiums');
-//	}
+	public function condo(){
+		return $this->belongsToMany('Cygnus\Repo\Condominium\Condominium','user_condominiums');
+	}
 
 
+	/**
+	 *This function make a new Object of Eloquent
+	 *
+	 * @param $email
+	 * @param $password
+	 * @return static
+     */
 	public static function register($email,$password) {
 		$user = new static(compact('email','password'));
 		return $user;
 		//raise event
 	}
 
-	public function condo(){
-		return $this->belongsToMany('Cygnus\Repo\Condominium\Condominium','user_condominiums');
-	}
 
 }

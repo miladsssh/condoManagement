@@ -16,9 +16,15 @@ use Laracasts\Commander\CommandHandler;
 
 class CondoUpdateCommandHandler implements CommandHandler {
 
+    /**
+     * @var CondoRepo
+     */
     protected $repository;
 
 
+    /**
+     * @param CondoRepo $repository
+     */
     function __construct(CondoRepo $repository)
     {
         $this->repository = $repository;
@@ -33,9 +39,7 @@ class CondoUpdateCommandHandler implements CommandHandler {
      */
     public function handle($command)
     {
-        $condo = Condominium::register($command->name);
-        $this->repository->update($condo, $command->id);
-        return $condo;
+        $this->repository->update($command->name, $command->condoId);
     }
 
 }

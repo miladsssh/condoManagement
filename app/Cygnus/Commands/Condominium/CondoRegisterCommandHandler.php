@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: miladsssh
@@ -12,11 +13,22 @@ use Cygnus\Repo\Condominium\Condominium;
 use Cygnus\Repo\Condominium\CondoRepo;
 use Laracasts\Commander\CommandHandler;
 
+
+/**
+ * Class CondoRegisterCommandHandler
+ * @package Cygnus\Commands\Condominium
+ */
 class CondoRegisterCommandHandler implements CommandHandler{
 
+    /**
+     * @var CondoRepo
+     */
     protected $repository;
 
 
+    /**
+     * @param CondoRepo $repository
+     */
     function __construct(CondoRepo $repository)
     {
         $this->repository = $repository;
@@ -31,8 +43,10 @@ class CondoRegisterCommandHandler implements CommandHandler{
      */
     public function handle($command)
     {
+        dd($command);
 		$condo = Condominium::register($command->name);
         $this->repository->save($condo, $command->userId);
         return $condo;
     }
+
 }

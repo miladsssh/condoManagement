@@ -11,10 +11,20 @@ namespace Cygnus\Commands\User;
 
 class UserRegisterCommand {
 
+    /**
+     * @var
+     */
     public $email;
 
+    /**
+     * @var
+     */
     public $password;
 
+    /**
+     * @param $email
+     * @param $password
+     */
     function __construct($email, $password)
     {
         $this->email = $email;

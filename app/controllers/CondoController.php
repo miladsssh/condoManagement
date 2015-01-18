@@ -1,17 +1,19 @@
 <?php
 
+use Cygnus\Commands\Condominium\CondoDeleteCommand;
 use Cygnus\Commands\Condominium\CondoRegisterCommand;
 use Cygnus\Commands\Condominium\CondoUpdateCommand;
-use Cygnus\Core\CommandBus;
 use Cygnus\Core\CygnusResponse;
 use Cygnus\Forms\CondoRegistrationValidation;
 use Cygnus\Repo\Condominium\CondoRepo;
 
 
+/**
+ * Class CondoController
+ */
 class CondoController extends \BaseController {
 
 
-	use CommandBus;
 	use CygnusResponse;
 
 
@@ -19,6 +21,11 @@ class CondoController extends \BaseController {
 
 	protected $condoRegistrationValidation;
 
+
+	/**
+	 * @param CondoRegistrationValidation $condoRegistrationValidation
+	 * @param CondoRepo $condoRepository
+     */
 	public function __construct(CondoRegistrationValidation $condoRegistrationValidation, CondoRepo $condoRepository){
 		$this->condoRegistrationValidation = $condoRegistrationValidation;
 		$this->condoRepository = $condoRepository;
@@ -47,11 +54,9 @@ class CondoController extends \BaseController {
 	 */
 	public function store()
 	{
+		$input = array_add(Input::get(), 'userId', Auth::id());
 		$this->condoRegistrationValidation->validate( Input::all() );
-		extract(Input::only('name'));
-		$this->execute(
-			new CondoRegisterCommand($name, Auth::user()->id)
-		);
+		$this->execute(CondoRegisterCommand::class, $input);
 		return $this->sendJsonMessage('success',200);
 	}
 
@@ -77,11 +82,9 @@ class CondoController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//$this->condoRegistrationValidation->validate( Input::all() );
-		extract(Input::only('name'));
-		$this->execute(
-			new CondoUpdateCommand($id, $name)
-		);
+		$this->condoRegistrationValidation->validate( Input::all() );
+		$input = array_add(Input::get(), 'condoId', $id);
+		$this->execute(CondoUpdateCommand::class,$input);
 		return $this->sendJsonMessage('success',200);
 	}
 
@@ -94,7 +97,9 @@ class CondoController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$input = array_add(Input::get(), 'condoId', $id);
+		$this->execute(CondoDeleteCommand::class,$input);
+		return $this->sendJsonMessage('success',200);
 	}
 
 }

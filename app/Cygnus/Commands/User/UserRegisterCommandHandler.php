@@ -15,9 +15,15 @@ use Laracasts\Commander\CommandHandler;
 
 class UserRegisterCommandHandler implements CommandHandler{
 
+    /**
+     * @var UserRepo
+     */
     protected $repository;
 
 
+    /**
+     * @param UserRepo $repository
+     */
     function __construct(UserRepo $repository)
     {
         $this->repository = $repository;

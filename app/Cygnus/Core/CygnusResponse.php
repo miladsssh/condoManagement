@@ -12,6 +12,7 @@ namespace Cygnus\Core;
 trait CygnusResponse {
 
     /**
+     *
      * @param $httpMessage
      * @param $httpStatus
      * @return mixed
