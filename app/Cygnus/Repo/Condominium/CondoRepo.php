@@ -15,7 +15,7 @@ use Cygnus\Repo\User\User;
  * Class CondoRepo
  * @package Cygnus\Repo\Condominium
  */
-class CondoRepo implements CondoRepoInterface, CondoRepoInterface
+class CondoRepo implements CondoRepoInterface
 {
 
     /**

@@ -43,7 +43,6 @@ class CondoRegisterCommandHandler implements CommandHandler{
      */
     public function handle($command)
     {
-        dd($command);
 		$condo = Condominium::register($command->name);
         $this->repository->save($condo, $command->userId);
         return $condo;
