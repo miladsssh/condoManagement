@@ -10,9 +10,11 @@
       <library name="PHARS">
         <CLASSES>
           <root url="phar://$MODULE_DIR$/phpDocumentor.phar" />
+          <root url="phar://$MODULE_DIR$/vendor/phpdocumentor/fileset/tests/data/test.phar" />
         </CLASSES>
         <SOURCES>
           <root url="phar://$MODULE_DIR$/phpDocumentor.phar" />
+          <root url="phar://$MODULE_DIR$/vendor/phpdocumentor/fileset/tests/data/test.phar" />
         </SOURCES>
       </library>
     </orderEntry>

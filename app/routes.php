@@ -19,11 +19,17 @@ Route::get ('/', array('as'=>'home', 'uses'=>'HomeController@showWelcome'));
 Route::post('register', array('as'=>'homeToRegister', 'uses'=>'UserController@store' ));
 Route::post('login', array('as'=>'homeToLogin', 'uses'=>'UserController@login' ));
 Route::post('forgetPassword', array('as'=>'homeToForget', 'uses'=>'RemindersController@postRemind' ));
-Route::get ('logout', array('as'=>'Logout', 'uses'=>'UserController@destroy'));
+Route::get ('logout', array('as'=>'Logout', 'uses'=>'UserController@logout'));
 
 Route::group(array('prefix'=>'','before'=>'auth'),function(){
 	Route::resource('condo', 'CondoController');
+	Route::resource('ticket', 'TicketController');
+	Route::get('panel', function(){
+		return View::make('tenant');
+	});
 });
+
+
 
 
 Route::get('/adminDashboard',function()

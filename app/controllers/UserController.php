@@ -71,19 +71,34 @@ class UserController extends BaseController {
 	}
 
 
+	/**
+	 * @return mixed
+	 */
+	public function logout()
+	{
+		Auth::logout();
+		return $this->sendJsonMessage('success',200);
+	}
+
+
+
+
+
 	public function forget()
 	{
 		dd('forget');
 	}
 
 
+
+
+
 	/**
 	 * @return mixed
-     */
+	 */
 	public function destroy()
 	{
-		Auth::logout();
-		return $this->sendJsonMessage('success',200);
+		dd('remove user');
 	}
 
 

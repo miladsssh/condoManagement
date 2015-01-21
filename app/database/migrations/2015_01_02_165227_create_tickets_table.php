@@ -15,11 +15,13 @@ class CreateTicketsTable extends Migration {
 		Schema::create('tickets', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('title', 60);
-			$table->string('description');
-			$table->integer('from');
-			$table->integer('to');
+			$table->integer('user_id');
 			$table->integer('condominiums_id');
+			$table->integer('batch_id');
+			$table->string('title', 60);
+			$table->text('description')->nullable();
+			$table->string('image', 45)->nullable();
+			$table->integer('status',1)->defualt(1);
 			$table->timestamps();
 		});
 	}

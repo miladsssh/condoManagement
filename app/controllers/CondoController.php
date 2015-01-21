@@ -16,7 +16,6 @@ class CondoController extends \BaseController {
 
 	use CygnusResponse;
 
-
 	protected $condoRepository;
 
 	protected $condoRegistrationValidation;
@@ -84,7 +83,7 @@ class CondoController extends \BaseController {
 	{
 		$this->condoRegistrationValidation->validate( Input::all() );
 		$input = array_add(Input::get(), 'condoId', $id);
-		$this->execute(CondoUpdateCommand::class,$input);
+		$this->execute(CondoUpdateCommand::class, $input);
 		return $this->sendJsonMessage('success',200);
 	}
 

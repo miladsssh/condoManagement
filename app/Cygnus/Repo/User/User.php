@@ -50,6 +50,18 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	}
 
 
+
+	/**
+	 * The Relation is One To Many
+	 * Each User can have many tickets
+	 *
+	 * @return mixed
+	 */
+	public function ticket(){
+		return $this->hasMany('Cygnus\Repo\Ticket\Ticket');
+	}
+
+
 	/**
 	 *This function make a new Object of Eloquent
 	 *

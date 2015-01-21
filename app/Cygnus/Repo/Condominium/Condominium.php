@@ -35,6 +35,10 @@ class Condominium extends Eloquent{
     }
 
 
+    public function ticket(){
+        return $this->hasMany('Cygnus\Repo\Ticket\Ticket');
+    }
+
     /**
      *This function make a new Object of Eloquent
      *
