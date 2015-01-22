@@ -5,4 +5,12 @@
 		$scope.message = 'I am Angularjs!';
 	});
 
+
+	cygnusApp.controller('ticketController', function($scope) {		
+		$scope.message = 'I am Angularjs!';
+	});
+
+	cygnusApp.controller('boardController', function($scope) {		
+		$scope.message = 'I am Angularjs!';
+	});
 	
