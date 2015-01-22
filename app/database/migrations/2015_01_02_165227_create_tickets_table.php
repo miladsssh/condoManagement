@@ -21,7 +21,7 @@ class CreateTicketsTable extends Migration {
 			$table->string('title', 60);
 			$table->text('description')->nullable();
 			$table->string('image', 45)->nullable();
-			$table->integer('status',1)->defualt(1);
+			$table->integer('status')->defualt(1)->nullable();
 			$table->timestamps();
 		});
 	}

@@ -10881,3 +10881,6 @@ Transparent Button
   background: transparent;
   color: #888;
 }
+
+ul.ticket-list{ padding-left: 0px !important; }
+ul.ticket-list li{ list-style: none !important; }
