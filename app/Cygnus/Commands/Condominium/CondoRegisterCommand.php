@@ -15,15 +15,11 @@ namespace Cygnus\Commands\Condominium;
  */
 class CondoRegisterCommand {
 
-    /**
-     * @var
-     */
+
     public $name;
 
-    /**
-     * @var
-     */
     public $userId;
+
 
     /**
      * @param $name

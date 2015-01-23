@@ -14,6 +14,20 @@ use Cygnus\Repo\User\User;
 class TicketRepo {
 
 
+
+    public function save(Ticket $ticket)
+    {
+        return $ticket->save();
+    }
+
+
+
+    public static function delete($ticketId)
+    {
+        $currentTicket = self::getTicketById($ticketId);;
+        $currentTicket->delete();
+    }
+
     /**
      * This function use in TicketRepo
      * Want to send All Ticket related to User
@@ -23,6 +37,11 @@ class TicketRepo {
      */
     public static function getAllForUser(User $user) {
         return $user->ticket()->get();
+    }
+
+
+    public static function getTicketById($ticketId) {
+        return Ticket::findOrfail($ticketId);
     }
 
 }

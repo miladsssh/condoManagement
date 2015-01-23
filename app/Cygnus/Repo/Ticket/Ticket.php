@@ -11,8 +11,15 @@ use Eloquent;
 
 class Ticket extends Eloquent{
 
-    protected  $fillable = ['title'];
+    protected  $fillable = ['title','user_id','condominiums_id'];
 
     protected $table = 'tickets';
+
+
+    public static function register($title, $user_id, $condominiums_id) {
+        $ticket = new static(compact('title','user_id', 'condominiums_id'));
+        return $ticket;
+        //raise event
+    }
     
 }
