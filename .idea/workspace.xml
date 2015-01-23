@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caa04e66-73ee-4a7d-8737-de35e5eae4f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Cygnus/Commands/Ticket/TicketDeleteCommand.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Cygnus/Commands/Ticket/TicketDeleteCommandHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Cygnus/Forms/TicketRegistrationValidation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Cygnus/Commands/Condominium/CondoRegisterCommand.php" afterPath="$PROJECT_DIR$/app/Cygnus/Commands/Condominium/CondoRegisterCommand.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Cygnus/Repo/Ticket/Ticket.php" afterPath="$PROJECT_DIR$/app/Cygnus/Repo/Ticket/Ticket.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Cygnus/Repo/Ticket/TicketRepo.php" afterPath="$PROJECT_DIR$/app/Cygnus/Repo/Ticket/TicketRepo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/board/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/ticket/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controller.js" afterPath="$PROJECT_DIR$/public/js/controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/dashboard.html" afterPath="$PROJECT_DIR$/public/views/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/database.php" afterPath="$PROJECT_DIR$/app/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/route.js" afterPath="$PROJECT_DIR$/public/js/route.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tenant.blade.php" afterPath="$PROJECT_DIR$/app/views/tenant.blade.php" />
     </list>
     <ignored path="condoManagement.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,11 +49,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="TicketController.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/app/controllers/TicketController.php">
+          <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/routes.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="2.2510638" vertical-offset="0" max-vertical-offset="2070">
-                  <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+                <state vertical-scroll-proportion="-0.011347517" vertical-offset="376" max-vertical-offset="1081">
+                  <caret line="25" column="50" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="50" />
                   <folding />
                 </state>
               </provider>
@@ -180,6 +178,144 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="condoManagement">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="condoManagement">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="condoManagement">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views/partials/forms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="condoManagement">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="condoManagement">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="condoManagement">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="condoManagement">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="partials">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="condoManagement">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="partials">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="forms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -227,6 +363,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="condoManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="condoManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ticket" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="condoManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="condoManagement" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="board" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -422,144 +602,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Default">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="condoManagement">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="condoManagement">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="condoManagement">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views/partials/forms">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="condoManagement">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="condoManagement">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="condoManagement">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="condoManagement">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="partials">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="condoManagement">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="partials">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="forms">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -600,15 +642,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -636,19 +678,19 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24980237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26773456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26773456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -668,9 +710,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26877472" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947975" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -886,13 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tenant.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5222552" vertical-offset="14943" max-vertical-offset="15617">
-          <caret line="665" column="32" selection-start-line="665" selection-start-column="25" selection-end-line="665" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.032033425" vertical-offset="0" max-vertical-offset="718">
@@ -935,13 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5125348" vertical-offset="0" max-vertical-offset="805">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Cygnus/Forms/TicketRegistrationValidation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2609929" vertical-offset="0" max-vertical-offset="705">
@@ -962,16 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3913649" vertical-offset="317" max-vertical-offset="1035">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <marker date="1421555646229" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1421555646229" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421555646229" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421555646229" expanded="true" signature="-1:-1" placeholder=" @var UserRepo ..." />
-            <marker date="1421555646229" expanded="true" signature="-1:-1" placeholder=" @param UserRepo $repository ..." />
-            <marker date="1421555646229" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1421555646229" expanded="true" signature="-1:-1" placeholder=" Handle the command ..." />
-            <marker date="1421555646229" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -979,12 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5766017" vertical-offset="0" max-vertical-offset="718">
           <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <marker date="1421552372564" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1421552372564" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1421552372564" expanded="true" signature="-1:-1" placeholder=" Register a new User ..." />
-            <marker date="1421552372564" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -992,26 +1004,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.80083567" vertical-offset="0" max-vertical-offset="782">
           <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-          <folding>
-            <marker date="1421928603990" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1421928603990" expanded="true" signature="-1:-1" placeholder=" Class CondoRegisterCommand ..." />
-            <marker date="1421928603990" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421928603990" expanded="true" signature="-1:-1" placeholder=" @param $name ..." />
-            <marker date="1421928603990" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Cygnus/Commands/Ticket/TicketRegisterCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7047354" vertical-offset="0" max-vertical-offset="736">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding>
-            <marker date="1421928635067" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1421928635067" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421928635067" expanded="true" signature="-1:-1" placeholder=" @param $title ..." />
-            <marker date="1421928635067" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,16 +1012,94 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6476323" vertical-offset="409" max-vertical-offset="1127">
           <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cygnus/Repo/Ticket/Ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39148936" vertical-offset="0" max-vertical-offset="705">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cygnus/Repo/Condominium/Condominium.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19574468" vertical-offset="207" max-vertical-offset="1357">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cygnus/Repo/Condominium/CondoRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2632312" vertical-offset="892" max-vertical-offset="1955">
+          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/CondoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64113474" vertical-offset="1687" max-vertical-offset="2392">
+          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cygnus/Commands/Ticket/TicketDeleteCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54456824" vertical-offset="0" max-vertical-offset="718">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cygnus/Commands/Ticket/TicketDeleteCommandHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7116992" vertical-offset="271" max-vertical-offset="989">
+          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cygnus/Repo/Ticket/TicketRepo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60863507" vertical-offset="0" max-vertical-offset="1081">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/TicketController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3148936" vertical-offset="1365" max-vertical-offset="2070">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
-            <marker date="1421557428149" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1421557428149" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1421557428149" expanded="true" signature="-1:-1" placeholder=" Class CondoRegisterCommandHandler ..." />
-            <marker date="1421557428149" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421557428149" expanded="true" signature="-1:-1" placeholder=" @var CondoRepo ..." />
-            <marker date="1421557428149" expanded="true" signature="-1:-1" placeholder=" @param CondoRepo $repository ..." />
-            <marker date="1421557428149" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1421557428149" expanded="true" signature="-1:-1" placeholder=" Handle the command ..." />
-            <marker date="1421557428149" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1421932168388" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1421932168388" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421932168388" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1421932168388" expanded="true" signature="-1:-1" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1421932168388" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1421932168388" expanded="true" signature="-1:-1" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1421932168388" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1421932168388" expanded="true" signature="-1:-1" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1421932168388" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1421932168388" expanded="true" signature="-1:-1" placeholder=" Display the specified resource. ..." />
+            <marker date="1421932168388" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1421932168388" expanded="true" signature="-1:-1" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1421932168388" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cygnus/Commands/Ticket/TicketRegisterCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7049645" vertical-offset="9" max-vertical-offset="736">
+          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding>
+            <marker date="1421928635067" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1421928635067" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421928635067" expanded="true" signature="-1:-1" placeholder=" @param $title ..." />
+            <marker date="1421928635067" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -1049,117 +1120,195 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Cygnus/Repo/Ticket/Ticket.php">
+    <entry file="file://$PROJECT_DIR$/app/views/tenant.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39148936" vertical-offset="0" max-vertical-offset="705">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.8042553" vertical-offset="11968" max-vertical-offset="12673">
+          <caret line="545" column="7" selection-start-line="545" selection-start-column="7" selection-end-line="545" selection-end-column="7" />
           <folding>
-            <marker date="1421929737760" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1421929737760" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421929737760" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1421982291754" expanded="true" signature="-1:-1" placeholder="//..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Cygnus/Repo/Condominium/Condominium.php">
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19574468" vertical-offset="207" max-vertical-offset="1357">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <marker date="1421930037629" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1421930037629" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421930037629" expanded="true" signature="-1:-1" placeholder=" @var array ..." />
-            <marker date="1421930037629" expanded="true" signature="-1:-1" placeholder=" @var string ..." />
-            <marker date="1421930037629" expanded="true" signature="-1:-1" placeholder=" The Relation is Many To Many ..." />
-            <marker date="1421930037629" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1421930037629" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421930037629" expanded="true" signature="-1:-1" placeholder="This function make a new Object of Eloquent ..." />
-            <marker date="1421930037629" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Cygnus/Repo/Condominium/CondoRepo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2632312" vertical-offset="892" max-vertical-offset="1955">
-          <caret line="52" column="25" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
-          <folding>
-            <marker date="1421557261137" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1421557261137" expanded="true" signature="-1:-1" placeholder=" Class CondoRepo ..." />
-            <marker date="1421557261137" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1421557261137" expanded="true" signature="-1:-1" placeholder=" Register a New Condo ..." />
-            <marker date="1421557261137" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1421557261137" expanded="true" signature="-1:-1" placeholder=" Update a Condo ..." />
-            <marker date="1421557261137" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1421557261137" expanded="true" signature="-1:-1" placeholder=" Delete a Condo ..." />
-            <marker date="1421557261137" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1421557261137" expanded="true" signature="-1:-1" placeholder=" This function use in CondoRepo ..." />
-            <marker date="1421557261137" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421557261137" expanded="true" signature="-1:-1" placeholder=" Get Condo By Id ..." />
-            <marker date="1421557261137" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/CondoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64113474" vertical-offset="1687" max-vertical-offset="2392">
-          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Cygnus/Commands/Ticket/TicketDeleteCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54456824" vertical-offset="0" max-vertical-offset="718">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding>
-            <marker date="1421931992319" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1421931992319" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421931992319" expanded="true" signature="-1:-1" placeholder=" @var ..." />
-            <marker date="1421931992319" expanded="true" signature="-1:-1" placeholder=" @param $ticketId ..." />
-            <marker date="1421931992319" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Cygnus/Commands/Ticket/TicketDeleteCommandHandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7116992" vertical-offset="271" max-vertical-offset="989">
-          <caret line="41" column="30" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-          <folding>
-            <marker date="1421932007475" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1421932007475" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1421932007475" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421932007475" expanded="true" signature="-1:-1" placeholder=" @var CondoRepo ..." />
-            <marker date="1421932007475" expanded="true" signature="-1:-1" placeholder=" @param TicketRepo $repository ..." />
-            <marker date="1421932007475" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1421932007475" expanded="true" signature="-1:-1" placeholder=" Handle the command ..." />
-            <marker date="1421932007475" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Cygnus/Repo/Ticket/TicketRepo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60863507" vertical-offset="0" max-vertical-offset="1081">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <marker date="1421931209163" expanded="false" signature="-1:-1" placeholder=" Created by PhpStorm. ..." />
-            <marker date="1421931209163" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421931209163" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1421931209163" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1421931209163" expanded="true" signature="-1:-1" placeholder=" This function use in TicketRepo ..." />
-            <marker date="1421931209163" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1421931209163" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/TicketController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2510638" vertical-offset="0" max-vertical-offset="2070">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.011347517" vertical-offset="376" max-vertical-offset="1081">
+          <caret line="25" column="50" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="50" />
           <folding />
         </state>
       </provider>

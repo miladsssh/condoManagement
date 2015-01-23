@@ -21,10 +21,22 @@ Route::post('login', array('as'=>'homeToLogin', 'uses'=>'UserController@login' )
 Route::post('forgetPassword', array('as'=>'homeToForget', 'uses'=>'RemindersController@postRemind' ));
 Route::get ('logout', array('as'=>'Logout', 'uses'=>'UserController@logout'));
 
-Route::group(array('prefix'=>'','before'=>'auth'),function(){
+Route::group(array('prefix'=>'api','before'=>'auth'),function(){
 	Route::resource('condo', 'CondoController');
 	Route::resource('ticket', 'TicketController');
-	Route::get('panel', function(){
+});
+
+
+Route::group(array('prefix'=>'panel','before'=>'auth'),function(){
+	Route::get('index', function(){
+		return View::make('tenant');
+	});
+
+	Route::get('ticket', function(){
+		return View::make('tenant');
+	});
+
+	Route::get('board', function(){
 		return View::make('tenant');
 	});
 });
