@@ -54,6 +54,7 @@ class TicketController extends \BaseController {
 	{
 		$input = array_add(Input::get(), 'userId', Auth::id());
 		$input = array_add($input, 'condoId', '6');
+		$input = array_add($input, 'batchId', '1');
 		$this->ticketRegistrationValidation->validate( Input::all() );
 		$this->execute(TicketRegisterCommand::class, $input);
 		return $this->sendJsonMessage('success',200);

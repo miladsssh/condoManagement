@@ -40,7 +40,8 @@ class TicketRegisterCommandHandler implements CommandHandler {
     {
         $ticket = Ticket::register( $command->title,
                                     $command->userId,
-                                    $command->condoId);
+                                    $command->condoId,
+                                    $command->batchId);
         $this->repository->save($ticket);
         return $ticket;
     }
