@@ -25,7 +25,7 @@
 		<div class="portlet-title">
 			<div class="caption">
 				<i class="icon-share font-green-haze hide"></i>
-				<span class="caption-subject font-green-haze bold uppercase">List of Tickets</span>
+				<span class="caption-subject font-green-haze bold uppercase">Ticket</span>
 			</div>
 			<div class="actions">
 				<!--<script type="text/ng-template" id="/tpl.html">
@@ -41,93 +41,11 @@
 					</a>
 				</div>
 
-				<div class="btn-group">
-					<a class="btn green-haze btn-circle btn-sm" href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-						Filter &nbsp;<i class="fa fa-angle-down"></i>
-					</a>
-					<ul class="dropdown-menu pull-right">
-						<li>
-							<a href="#">
-								<i class="i"></i> All Tickets 
-							</a>
-						</li>
-						<li class="divider">
-						</li>
-						<li>
-							<a href="#">
-								Pending <span class="badge badge-danger">
-								4 </span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								Completed <span class="badge badge-success">
-								12 </span>
-							</a>
-						</li>
-					</ul>
-				</div>
-
 			</div>
 		</div>
 		<div class="portlet-body">
 			<div data-always-visible="1" data-rail-visible="0">
-				<!-- <ul class="ticket-list">
-					<li>
-						<div class="col1">
-							<div class="cont"> -->
-
-
-
-								
-									<table datatable="ng" class="row-border hover" id="ticketsTable">
-										<thead>
-											<tr role="row">
-												<th class="sorting" tabindex="0" aria-controls="ticketsTable" rowspan="1" colspan="1" aria-label="
-												Rendering engine : activate to sort column ascending" style="width: 175px;">
-													Title
-												</th>
-												<th class="sorting_asc" tabindex="0" aria-controls="ticketsTable" rowspan="1" colspan="1" aria-label="
-												Browser : activate to sort column ascending" style="width: 224px;">
-													Description
-												</th>
-												<th style="width: 30px;">
-													Action
-												</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr role="row" ng-repeat="ticket in tickets" >
-												<td class="ticket-title">
-													<span class="ticket-title-sp">
-														{{ticket.title}} 
-													</span>
-												</td>
-												<td class="sorting_1">
-													<span class="ticket-description-sp">
-														{{ticket.description}} 
-													</span>
-												</td>
-												<td>
-													<a href="/panel/ticket/{{ticket.batch_id}}" class="btn btn-xs default"><i class="fa fa-search"></i> View</a>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-
-
-
-								<!-- <div class="cont-col2" ng-repeat="ticket in tickets" style="border-bottom: 1px solid rgb(234, 234, 234); padding: 5px 0px;">
-									<div class="ticket-title">
-										<span class="ticket-title-sp">
-											{{ticket.title}} 
-										</span>
-									</div>
-								</div> -->
-							<!-- </div>
-						</div>
-					</li>
-				 --></ul>
+				
 			</div>
 			<div class="scroller-footer">
 				<div class="btn-arrow-link pull-right">

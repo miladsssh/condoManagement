@@ -13,6 +13,9 @@
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="" name="description"/>
 <meta content="" name="author"/>
+
+<link href="/lib/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
 <link href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
@@ -26,6 +29,7 @@
 <link href="../../assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
 <link href="../../assets/global/plugins/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css"/>
 <link href="../../assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css"/>
+
 <!-- END PAGE LEVEL PLUGIN STYLES -->
 <!-- BEGIN PAGE STYLES -->
 <link href="../../assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
@@ -403,7 +407,7 @@
 							<li class="divider">
 							</li>
 							<li>
-								<a href="extra_lock.html">
+								<a href="/panel/extra-lock">
 								<i class="icon-lock"></i> Lock Screen </a>
 							</li>
 							<li>
@@ -434,13 +438,27 @@
 			<div class="page-sidebar navbar-collapse collapse">
 				<!-- BEGIN SIDEBAR MENU -->
 				<ul class="page-sidebar-menu page-sidebar-menu-hover-submenu " data-auto-scroll="true" data-slide-speed="200">
-					<li class="start active ">
-						<a href="index">
+					<li class="start active homeMenu">
+						<a href="/panel/index">
 						<i class="icon-home"></i>
 						<span class="title">Dashboard</span>
 						<span class="selected"></span>
 						</a>
-					</li>															
+					</li>
+
+					<li class="start ticketMenu">
+						<a href="/panel/ticket">
+							<i class="fa fa-ticket"></i>
+							<span class="title">Ticket</span>
+						</a>
+					</li>	 
+
+					<li class="start boardMenu">
+						<a href="/panel/board">
+							<i class="fa fa-list-alt"></i>
+							<span class="title">Board</span>
+						</a>
+					</li>	 													
 				</ul>
 				<!-- END SIDEBAR MENU -->
 			</div>
@@ -517,6 +535,7 @@
 <script src="../../assets/admin/layout2/scripts/demo.js" type="text/javascript"></script>
 <script src="../../assets/admin/pages/scripts/index.js" type="text/javascript"></script>
 <script src="../../assets/admin/pages/scripts/tasks.js" type="text/javascript"></script>
+
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 jQuery(document).ready(function() {    
@@ -535,11 +554,20 @@ jQuery(document).ready(function() {
 });
 </script>
 
+
+<script src="/lib/datatables/media/js/jquery.dataTables.min.js"></script>
 <script src="/lib/angular/angular.min.js"></script>
+<script src="/lib/angular-datatables/dist/angular-datatables.min.js"></script>
+
+
 <script src="/lib/angular-route/angular-route.min.js"></script>
+<script src="/lib/ui-bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+<script src="/lib/angular-resource/angular-resource.min.js"></script>
+
 <script src="/js/app.js"></script>
 <script src="/js/route.js"></script>
 <script src="/js/controller.js"></script>
+
 <!-- END JAVASCRIPTS -->
 </body>
 <!-- END BODY -->

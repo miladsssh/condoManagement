@@ -10884,3 +10884,5 @@ Transparent Button
 
 ul.ticket-list{ padding-left: 0px !important; }
 ul.ticket-list li{ list-style: none !important; }
+.modal-dialog{ margin-top: 100px }
+.ticket-title-sp{ text-transform: capitalize; }

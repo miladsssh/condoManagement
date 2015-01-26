@@ -10,10 +10,16 @@
 			  controller:  'ticketController',
 			  templateUrl: '/views/ticket/index.html'
 		})
+		.when('/panel/ticket/:id' , {
+			  controller:  'ticketDetailController',
+			  templateUrl: '/views/ticket/ticketDetail.html'
+		})
+
 		.when('/panel/board' , {
 			  controller:  'boardController',
 			  templateUrl: '/views/board/index.html'
 		});
+		
 
 		$locationProvider.html5Mode({
 		  enabled: true,

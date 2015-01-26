@@ -19,6 +19,7 @@
 	<div class="clearfix">
 	</div>
 
+
 	<div class="col-sm-6">
 		<div class="portlet light">
 			<div class="portlet-title">
@@ -55,43 +56,40 @@
 					</div>
 				</div>
 			</div>
-<<<<<<< HEAD
-		</div>
-		<div class="portlet-body">
-			<div class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible="0">
-				<ul class="feeds">
-					<li>
-						<div class="col1">
-							<div class="cont">
-								<div class="cont-col1">
-									<div class="label label-sm label-info">
-										<i class="fa fa-check"></i>
-									</div>
-								</div>
-								<div class="cont-col2">
-									<div class="desc">
-										{{message}} <span class="label label-sm label-warning ">
-											Take action <i class="fa fa-share"></i>
-										</span>
-=======
 			<div class="portlet-body">
 				<div class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible="0">
-					<ul class="ticket-list">
-						<li>
-							<div class="col1">
-								<div class="cont">
-									<div class="cont-col2">
-										<div class="ticket-title">
-											<span class="ticket-title-sp">
-												Present 2013 Year IPO Statistics at Board Meeting 
-											</span>
-										</div>
->>>>>>> 2f289639023669d71aae8f15fe906e3151c46047
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
+					<table class="table hover" id="ticketsTable">
+						<thead>
+							<tr role="row">
+								<th style="width: 175px;">
+									Title
+								</th>
+								<th style="width: 224px;">
+									Description
+								</th>
+								<th style="width: 30px;">
+									Action
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr role="row" ng-repeat="ticket in tickets">
+								<td class="ticket-title">
+									<span class="ticket-title-sp">
+										{{ticket.title}} 
+									</span>
+								</td>
+								<td class="sorting_1">
+									<span class="ticket-description-sp">
+										{{ticket.description}} 
+									</span>
+								</td>
+								<td>
+									<a href="/panel/ticket/{{ticket.batch_id}}" class="btn btn-xs default"><i class="fa fa-search"></i> View</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 				<div class="scroller-footer">
 					<div class="btn-arrow-link pull-right">
@@ -102,6 +100,7 @@
 			</div>
 		</div>
 	</div>
+
 
 	<div class="col-sm-6">
 		<div class="portlet light">

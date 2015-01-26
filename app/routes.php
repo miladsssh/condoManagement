@@ -36,9 +36,14 @@ Route::group(array('prefix'=>'panel','before'=>'auth'),function(){
 		return View::make('tenant');
 	});
 
+	Route::get('ticket/{id}', function(){
+		return View::make('tenant');
+	});
+
 	Route::get('board', function(){
 		return View::make('tenant');
 	});
+	
 });
 
 

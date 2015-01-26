@@ -36,7 +36,7 @@ class TicketRepo {
      * @return mixed
      */
     public static function getAllForUser(User $user) {
-        return $user->ticket()->get();
+        return $user->ticket()->groupby('batch_id')->get();
     }
 
 
