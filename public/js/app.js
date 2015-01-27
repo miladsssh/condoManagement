@@ -3,35 +3,35 @@
 
 	cygnusApp.factory('dataFactory', ['$http', function($http) {
 
-    var dataFactory = {};
+        var dataFactory = {};
 
-    dataFactory.getTickets = function(){
-        return $http.get('/api/ticket');
-    };
+        dataFactory.getTickets = function(){
+            return $http.get('/api/ticket');
+        };
 
-    dataFactory.getTicket = function(id){ 
-        return $http.get('/api/ticket/' + id);
-    };
+        dataFactory.getTicket = function(id){ 
+            return $http.get('/api/ticket/' + id);
+        };
 
-    // dataFactory.getCustomer = function (id) {
-    //     return $http.get(urlBase + '/' + id);
-    // };
+        // dataFactory.getCustomer = function (id) {
+        //     return $http.get(urlBase + '/' + id);
+        // };
 
-    // dataFactory.insertCustomer = function (cust) {
-    //     return $http.post(urlBase, cust);
-    // };
+        // dataFactory.insertCustomer = function (cust) {
+        //     return $http.post(urlBase, cust);
+        // };
 
-    // dataFactory.updateCustomer = function (cust) {
-    //     return $http.put(urlBase + '/' + cust.ID, cust)
-    // };
+        // dataFactory.updateCustomer = function (cust) {
+        //     return $http.put(urlBase + '/' + cust.ID, cust)
+        // };
 
-    // dataFactory.deleteCustomer = function (id) {
-    //     return $http.delete(urlBase + '/' + id);
-    // };
+        // dataFactory.deleteCustomer = function (id) {
+        //     return $http.delete(urlBase + '/' + id);
+        // };
 
-    // dataFactory.getOrders = function (id) {
-    //     return $http.get(urlBase + '/' + id + '/orders');
-    // };
+        // dataFactory.getOrders = function (id) {
+        //     return $http.get(urlBase + '/' + id + '/orders');
+        // };
 
-    return dataFactory;
-}]);
+        return dataFactory;
+    }]);

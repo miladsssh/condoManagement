@@ -58,7 +58,7 @@
 
 <body class="page-boxed page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid page-sidebar-closed-hide-logo">
 <!-- BEGIN HEADER -->
-<div class="page-header navbar navbar-fixed-top">
+<div class="page-header navbar navbar-fixed-top" style="">
 	<!-- BEGIN HEADER INNER -->
 	<div class="page-header-inner container">
 		<!-- BEGIN LOGO -->
@@ -450,6 +450,7 @@
 						<a href="/panel/ticket">
 							<i class="fa fa-ticket"></i>
 							<span class="title">Ticket</span>
+							<span class="selected"></span>
 						</a>
 					</li>	 
 
@@ -457,6 +458,7 @@
 						<a href="/panel/board">
 							<i class="fa fa-list-alt"></i>
 							<span class="title">Board</span>
+							<span class="selected"></span>
 						</a>
 					</li>	 													
 				</ul>
@@ -566,7 +568,9 @@ jQuery(document).ready(function() {
 
 <script src="/js/app.js"></script>
 <script src="/js/route.js"></script>
-<script src="/js/controller.js"></script>
+<script src="/js/commonController.js"></script>
+<script src="/js/ticketController.js"></script>
+<script src="/js/boardController.js"></script>
 
 <!-- END JAVASCRIPTS -->
 </body>
