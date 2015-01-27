@@ -1,7 +1,7 @@
 <!-- BEGIN LOGIN FORM -->
 {{ Form::open(array('route' => 'homeToLogin' ,'class="login-form"')) }}
 
-    <h3 class="form-title">Login to your account</h3>
+    <h3 class="form-title">Login To {{{$condoName}}}</h3>
     <div class="alert alert-danger display-hide">
         <button class="close" data-close="alert"></button>
 			<span>
