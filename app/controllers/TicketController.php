@@ -50,7 +50,7 @@ class TicketController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store($condoName)
 	{
 		$input = array_add(Input::get(), 'userId', Auth::id());
 		$input = array_add($input, 'condoId', '6');
@@ -67,9 +67,14 @@ class TicketController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($condoName ,$batchId)
 	{
-		dd('show just one ticket');
+		$ticket = $this->ticketRepository->getTicketByBatchId($batchId);
+
+		//bayad taghyeeer kone
+		if(!$ticket->count())
+			return CygnusResponse::sendJsonMessage('no result',400);
+		return $ticket->toJson();
 	}
 
 
@@ -80,7 +85,7 @@ class TicketController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy($condoName, $id)
 	{
 		$input = array_add(Input::get(), 'ticketId', $id);
 		$this->execute(TicketDeleteCommand::class, $input);

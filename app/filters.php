@@ -43,6 +43,16 @@ Route::filter('auth', function()
 });
 
 
+Route::filter('verifyCondoName', function($route)
+{
+	if(!Session::get('app.condo')) {
+		$condoName = $route->parameter('condoName');
+		$condoObj = \Cygnus\Repo\Condominium\CondoRepo::getCondoByName($condoName);
+		Session::push('app.condo', $condoObj);
+	}
+});
+
+
 Route::filter('auth.basic', function()
 {
 	return Auth::basic();

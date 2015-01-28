@@ -82,4 +82,10 @@ class CondoRepo implements CondoRepoInterface
         return Condominium::findOrfail($condoId);
     }
 
+
+    public static function getCondoByName($condoName) {
+        $condo = Condominium::where('name', $condoName)->firstOrFail();
+        return $condo->toJson();
+    }
+
 }

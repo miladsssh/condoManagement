@@ -9,6 +9,7 @@
 namespace Cygnus\Repo\Ticket;
 
 
+use Cygnus\Core\CygnusResponse;
 use Cygnus\Repo\User\User;
 
 class TicketRepo {
@@ -43,5 +44,10 @@ class TicketRepo {
     public static function getTicketById($ticketId) {
         return Ticket::findOrfail($ticketId);
     }
+
+    public static function getTicketByBatchId($ticketBatchId) {
+        return Ticket::where('batch_id', '=', $ticketBatchId)->get();
+    }
+
 
 }
