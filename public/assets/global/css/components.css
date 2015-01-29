@@ -10886,3 +10886,12 @@ ul.ticket-list{ padding-left: 0px !important; }
 ul.ticket-list li{ list-style: none !important; }
 .modal-dialog{ margin-top: 100px }
 .ticket-title-sp{ text-transform: capitalize; }
+.ticket-item{ 
+    //background-color: #EAEEFB; 
+    padding: 20px 20px 15px 20px; 
+    border-bottom: 1px solid rgb(234, 234, 234); 
+}
+.img-circle {
+  border-radius: 0px 30px 60px 30px !important;
+  border: 1px solid #CCC;
+}

@@ -411,7 +411,7 @@
 								<i class="icon-lock"></i> Lock Screen </a>
 							</li>
 							<li>
-								<a href="/logout">
+								<a href="/">
 								<i class="icon-key"></i> Log Out </a>
 							</li>
 						</ul>

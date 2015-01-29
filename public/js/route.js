@@ -19,6 +19,10 @@
 			  controller:  'boardController',
 			  templateUrl: '/views/board/index.html'
 		});
+
+		// .otherwise({
+	 //        redirectTo: '/'
+	 //    });
 		
 
 		$locationProvider.html5Mode({

@@ -39,6 +39,18 @@
 	cygnusApp.controller('ticketDetailController', function($scope, $modal, $http, $routeParams, $rootScope, dataFactory) {	
 		$('.start').removeClass('active');
 		$('.ticketMenu').addClass('active');
+
+		dataFactory.getTicket($routeParams.id)
+		.success(function (data) {
+			$scope.tickets = data ;
+			$scope.ticketTitle = data[0].title ;
+			console.log(data);
+		})
+		.error(function (error) {
+	        //  $scope.status = 'Unable to load customer data: ' + error.message;
+	    });
+
+
 		$scope.open = function (size) {
 			var modalInstance = $modal.open({
 				templateUrl: '/newTicketModal.html',
