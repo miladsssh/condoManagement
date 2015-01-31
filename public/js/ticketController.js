@@ -44,6 +44,7 @@
 		.success(function (data) {
 			$scope.tickets = data ;
 			$scope.ticketTitle = data[0].title ;
+			$scope.userID = data[0].user_id ;
 			console.log(data);
 		})
 		.error(function (error) {

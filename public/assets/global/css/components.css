@@ -10888,7 +10888,8 @@ ul.ticket-list li{ list-style: none !important; }
 .ticket-title-sp{ text-transform: capitalize; }
 .ticket-item{ 
     //background-color: #EAEEFB; 
-    padding: 20px 20px 15px 20px; 
+    padding: 20px 0px 15px 0px; 
+    margin: 0px;
     border-bottom: 1px solid rgb(234, 234, 234); 
 }
 .img-circle {

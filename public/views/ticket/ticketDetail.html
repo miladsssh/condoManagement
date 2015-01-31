@@ -40,19 +40,45 @@
 		<div class="portlet-body">
 			<div data-always-visible="1" data-rail-visible="0">
 				<div class="row ticket-item" ng-repeat="ticket in tickets">
-					<div class="col-sm-12" >
+
+					<div class="col-sm-12"  ng-if="ticket.user_id==userID">
 						<img src="/img/profileImage.png" class="img-circle pull-left" /> 
 						<div class="pull-left">
 							<div style="padding-left: 12px; font-weight: bold; text-transform: capitalize;">
-								user name
+								<span ng-if="ticket.user!=null">
+									{{ticket.user.first_name}} {{ticket.user.last_name}}
+								</span>
+								<span ng-if="ticket.user==null">
+									Your name
+								</span>
 							</div>
 							<div style="padding-left: 12px;">
 								Posted on: {{ticket.updated_at}}
 							</div>
 						</div>
 					</div>
+
+					<div class="col-sm-12"  ng-if="ticket.user_id!=userID">
+						<img src="/img/profileImage.png" class="img-circle pull-right" /> 
+						<div class="pull-right">
+							<div style="padding-right: 12px; font-weight: bold; text-transform: capitalize; text-align:right">
+								<span ng-if="ticket.user!=null">
+									{{ticket.user.first_name}} {{ticket.user.last_name}}
+								</span>
+								<span ng-if="ticket.user==null">
+									Admin name
+								</span>
+							</div>
+							<div style="padding-right: 12px; text-align:right">
+								Posted on: {{ticket.updated_at}}
+							</div>
+						</div>
+					</div>
+
+
+
 					<div class="col-sm-12" style="padding-top: 15px;">
-						<p>
+						<p style="text-indent: 30px; text-align: justify;">
 							{{ticket.description}} 
 						</p>
 					</div>

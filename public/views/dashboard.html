@@ -51,12 +51,12 @@
 							<tr role="row" ng-repeat="ticket in tickets">
 								<td class="ticket-title">
 									<span class="ticket-title-sp">
-										{{ticket.title}} 
+										{{ticket.title | limitTo : 20}} 
 									</span>
 								</td>
 								<td class="sorting_1">
 									<span class="ticket-description-sp">
-										{{ticket.description}} 
+										{{ticket.description | limitTo : 30}} 
 									</span>
 								</td>
 								<td>
