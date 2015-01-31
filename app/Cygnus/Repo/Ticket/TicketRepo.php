@@ -46,7 +46,7 @@ class TicketRepo {
     }
 
     public static function getTicketByBatchId($ticketBatchId) {
-        return Ticket::where('batch_id', '=', $ticketBatchId)->get();
+        return Ticket::where('batch_id', '=', $ticketBatchId)->orderBy('id','desc')->with('user')->get();
     }
 
 

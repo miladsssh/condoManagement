@@ -21,5 +21,10 @@ class Ticket extends Eloquent{
         return $ticket;
         //raise event
     }
+
+    public function user(){
+        return $this->belongsTo('Cygnus\Repo\User\User');
+    }
+
     
 }
