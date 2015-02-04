@@ -2,8 +2,10 @@
 
 use Cygnus\Commands\Ticket\TicketDeleteCommand;
 use Cygnus\Commands\Ticket\TicketRegisterCommand;
+use Cygnus\Commands\Ticket\TicketReplyCommand;
 use Cygnus\Core\CygnusResponse;
 use Cygnus\Forms\TicketRegistrationValidation;
+use Cygnus\Forms\TicketReplyValidation;
 use Cygnus\Repo\Ticket\TicketRepo;
 
 class TicketController extends \BaseController {
@@ -15,10 +17,15 @@ class TicketController extends \BaseController {
 
 	protected $ticketRegistrationValidation;
 
-	function __construct(TicketRepo $ticketRepository,TicketRegistrationValidation $ticketRegistrationValidation)
+	protected $ticketReplyValidation;
+
+	function __construct(TicketRepo $ticketRepository,
+						 TicketRegistrationValidation $ticketRegistrationValidation,
+						 TicketReplyValidation $ticketReplyValidation)
 	{
 		$this->ticketRegistrationValidation = $ticketRegistrationValidation;
 		$this->ticketRepository = $ticketRepository;
+		$this->ticketReplyValidation = $ticketReplyValidation;
 	}
 
 	/**
@@ -50,13 +57,25 @@ class TicketController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store($condoName)
+	public function store()
 	{
+		$condoId = json_decode(Session::get('app.condo')[0])->id;
+		$batchId = Str::random(20);
 		$input = array_add(Input::get(), 'userId', Auth::id());
-		$input = array_add($input, 'condoId', '6');
-		$input = array_add($input, 'batchId', '1');
+		$input = array_add($input, 'condoId', $condoId);
+		$input = array_add($input, 'batchId', $batchId);
 		$this->ticketRegistrationValidation->validate( Input::all() );
 		$this->execute(TicketRegisterCommand::class, $input);
+		return $this->sendJsonMessage('success',200);
+	}
+
+
+	public function replyTicket()
+	{
+		$input = array_add(Input::get(), 'userId', Auth::id());
+		$input = array_add($input, 'condoId', json_decode(Session::get('app.condo')[0])->id);
+		$this->ticketReplyValidation->validate( Input::all() );
+		$this->execute(TicketReplyCommand::class, $input);
 		return $this->sendJsonMessage('success',200);
 	}
 

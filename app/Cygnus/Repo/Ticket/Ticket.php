@@ -11,13 +11,13 @@ use Eloquent;
 
 class Ticket extends Eloquent{
 
-    protected  $fillable = ['title','user_id','condominiums_id', 'batch_id'];
+    protected  $fillable = ['title','user_id','condominiums_id', 'batch_id', 'description'];
 
     protected $table = 'tickets';
 
 
-    public static function register($title, $user_id, $condominiums_id, $batch_id) {
-        $ticket = new static(compact('title','user_id', 'condominiums_id', 'batch_id'));
+    public static function register($title, $user_id, $condominiums_id, $batch_id, $description) {
+        $ticket = new static(compact('title','user_id', 'condominiums_id', 'batch_id', 'description'));
         return $ticket;
         //raise event
     }

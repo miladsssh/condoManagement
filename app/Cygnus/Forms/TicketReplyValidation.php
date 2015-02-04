@@ -2,21 +2,19 @@
 /**
  * Created by PhpStorm.
  * User: miladsssh
- * Date: 1/22/15
- * Time: 7:47 PM
+ * Date: 2/4/15
+ * Time: 7:18 PM
  */
 
 namespace Cygnus\Forms;
 
-
 use Laracasts\Validation\FormValidator;
 
-class TicketRegistrationValidation extends FormValidator{
+class TicketReplyValidation extends FormValidator{
     /**
      * @var array
      */
     protected $rules = [
-        'title'  => 'required',
         'description' => 'required'
     ];
 }

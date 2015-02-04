@@ -33,6 +33,7 @@ Route::group(array( 'domain' => '{condoName}.condoapp.my' , 'before'=>'verifyCon
 	Route::group(array('prefix'=>'api','before'=>'auth'),function(){
 		Route::resource('condo', 'CondoController');
 		Route::resource('ticket', 'TicketController');
+		Route::post('ticket/reply', array('as'=>'replyToTicket', 'uses'=>'TicketController@replyTicket' ));
 	});
 
 

@@ -19,17 +19,20 @@ class TicketRegisterCommand {
 
     public $batchId;
 
+    public $description;
+
 
     /**
      * @param $title
      * @param $userId
      */
-    public function __construct($title, $userId, $condoId, $batchId)
+    public function __construct($title, $userId, $condoId, $batchId, $description)
     {
         $this->title = $title;
         $this->userId = $userId;
         $this->condoId = $condoId;
         $this->batchId = $batchId;
+        $this->description = $description;
     }
 
 }
