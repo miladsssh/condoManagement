@@ -40,16 +40,6 @@ class TicketController extends \BaseController {
 		return $ticket->toJson();
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 * GET /ticket/create
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		dd('create a new ticket');
-	}
 
 	/**
 	 * Store a newly created resource in storage.
@@ -59,11 +49,9 @@ class TicketController extends \BaseController {
 	 */
 	public function store()
 	{
-		$condoId = json_decode(Session::get('app.condo')[0])->id;
-		$batchId = Str::random(20);
 		$input = array_add(Input::get(), 'userId', Auth::id());
-		$input = array_add($input, 'condoId', $condoId);
-		$input = array_add($input, 'batchId', $batchId);
+		$input = array_add($input, 'condoId', json_decode(Session::get('app.condo')[0])->id);
+		$input = array_add($input, 'batchId', Str::random(20));
 		$this->ticketRegistrationValidation->validate( Input::all() );
 		$this->execute(TicketRegisterCommand::class, $input);
 		return $this->sendJsonMessage('success',200);
