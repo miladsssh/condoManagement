@@ -136,3 +136,20 @@
 			$modalInstance.dismiss('cancel');
 		};
 	});
+
+
+	cygnusApp.controller('AppController', function($scope, $rootScope, FileUploader) {
+		//$('.fileupload').hide();
+		var params = {};
+		params['fileType'] = 'ticket';
+		var uploader = $scope.uploader = new FileUploader({
+            url: '/api/uploadFile',
+            formData: params
+        });
+        
+        // uploader.onAfterAddingFile = function(fileItem) {
+        //     $('.fileupload').show();
+        // };
+
+        $rootScope.$$phase || $rootScope.$apply();
+	});

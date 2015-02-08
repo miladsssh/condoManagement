@@ -561,10 +561,11 @@ jQuery(document).ready(function() {
 <script src="/lib/angular/angular.min.js"></script>
 <script src="/lib/angular-datatables/dist/angular-datatables.min.js"></script>
 
-
 <script src="/lib/angular-route/angular-route.min.js"></script>
 <script src="/lib/ui-bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
 <script src="/lib/angular-resource/angular-resource.min.js"></script>
+
+<script src="/lib/angular-file-upload/angular-file-upload.js"></script> 
 
 <script src="/js/app.js"></script>
 <script src="/js/route.js"></script>
