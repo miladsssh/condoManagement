@@ -12,11 +12,10 @@ class HelperController extends BaseController{
 
     public function uploadFile(){
         if ( Input::hasFile('file') ) {
-            dd(Input::file('file'));
             $fileName = Str::random(10).'.'.Input::file('file')->getClientOriginalExtension();
-            $uploadPath = public_path().'/uploadedFiles/'; //.Str::random(10).'.'.$extension;
-            Input::file('file')->move($uploadPath, $fileName);
-            Session::push('app.uploadedFilePath', $fileName);
+//            $uploadPath = public_path().'/uploadedFiles/'; //.Str::random(10).'.'.$extension;
+//            Input::file('file')->move($uploadPath, $fileName);
+            Session::push('app.uploadedFilePath.'.mt_rant(), $fileName);
         } else {
             echo 'No files';
         }
