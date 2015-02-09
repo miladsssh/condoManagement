@@ -143,9 +143,13 @@
 		var params = {};
 		params['fileType'] = 'ticket';
 		var uploader = $scope.uploader = new FileUploader({
-            url: '/api/uploadFile',
+            url: '/api/upload',
             formData: params
         });
+
+		uploader.onCompleteAll() = function(){
+			console.log('sss');
+		};
         
         // uploader.onAfterAddingFile = function(fileItem) {
         //     $('.fileupload').show();

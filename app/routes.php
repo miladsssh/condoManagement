@@ -34,6 +34,8 @@ Route::group(array( 'domain' => '{condoName}.condoapp.my' , 'before'=>'verifyCon
 		Route::resource('condo', 'CondoController');
 		Route::resource('ticket', 'TicketController');
 		Route::post('ticket/reply', array('as'=>'replyToTicket', 'uses'=>'TicketController@replyTicket' ));
+		//Route::post('ticket/upload', array('as'=>'uploadToTicket', 'uses'=>'TicketController@upload' ));
+		Route::post('upload', array('as'=>'FileUpload', 'uses'=>'HelperController@uploadFile' ));
 	});
 
 
