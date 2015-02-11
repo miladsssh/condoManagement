@@ -19,7 +19,6 @@ class CreateUploadsTable extends Migration {
 			$table->string('file_type', 60);
 			$table->integer('file_reference_id');
 			$table->timestamps();
-			$table->rememberToken();
 		});
 	}
 

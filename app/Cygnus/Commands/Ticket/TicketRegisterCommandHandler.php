@@ -43,8 +43,7 @@ class TicketRegisterCommandHandler implements CommandHandler {
                                     $command->condoId,
                                     $command->batchId,
                                     $command->description);
-        $this->repository->save($ticket);
-        return $ticket;
+        return $this->repository->save($ticket);
     }
 
 }

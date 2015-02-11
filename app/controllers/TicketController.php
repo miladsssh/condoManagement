@@ -53,7 +53,8 @@ class TicketController extends \BaseController {
 		$input = array_add($input, 'condoId', json_decode(Session::get('app.condo')[0])->id);
 		$input = array_add($input, 'batchId', Str::random(20));
 		$this->ticketRegistrationValidation->validate( Input::all() );
-		$this->execute(TicketRegisterCommand::class, $input);
+		$lastTicketId = $this->execute(TicketRegisterCommand::class, $input);
+		App::make('HelperController')->uploadFileFinalize($lastTicketId);
 		return $this->sendJsonMessage('success',200);
 	}
 

@@ -9,7 +9,6 @@
 namespace Cygnus\Repo\Ticket;
 
 
-use Cygnus\Core\CygnusResponse;
 use Cygnus\Repo\User\User;
 
 class TicketRepo {
@@ -18,7 +17,8 @@ class TicketRepo {
 
     public function save(Ticket $ticket)
     {
-        return $ticket->save();
+        $ticket->save();
+        return $ticket->id;
     }
 
 
