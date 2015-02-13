@@ -569,9 +569,10 @@ jQuery(document).ready(function() {
 
 <script src="/js/app.js"></script>
 <script src="/js/route.js"></script>
-<script src="/js/commonController.js"></script>
-<script src="/js/ticketController.js"></script>
-<script src="/js/boardController.js"></script>
+<script src="/js/models/ticketModel.js"></script>
+<script src="/js/controllers/commonController.js"></script>
+<script src="/js/controllers/ticketController.js"></script>
+<script src="/js/controllers/boardController.js"></script>
 
 <!-- END JAVASCRIPTS -->
 </body>

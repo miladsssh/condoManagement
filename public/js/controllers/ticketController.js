@@ -27,14 +27,7 @@
 			});
 
 			modalInstance.result.then(function (selectedItem) {
-				dataFactory.getTickets()
-					.success(function (data) {
-						$scope.tickets = data ;
-					})
-					.error(function (error) {
-				        //  $scope.status = 'Unable to load customer data: ' + error.message;
-				    });
-				$rootScope.$$phase || $rootScope.$apply();
+				$scope.tickets.push( selectedItem );
 			}, function () {
 				//$log.info('Modal dismissed at: ' + new Date());
 			});
@@ -89,7 +82,11 @@
 
 
 
-	cygnusApp.controller('storeReplyTicketController', function($scope, $http, $routeParams, $rootScope, $modalInstance, params) {
+	cygnusApp.controller('storeReplyTicketController', function($scope, $http, $routeParams, $rootScope, $modalInstance, FileUploader, dataFactory) {
+		var uploader = $scope.uploader = new FileUploader({
+            url: '/api/upload'
+        });
+
 		$scope.submitReplyTicket = function () {
 			var btn = $(this);
 			btn.button('loading');
@@ -105,6 +102,33 @@
 			}).error(function(data, status, headers, config) {
 				$('#createReplyTicket #description').val(data);
 			});
+
+			if( $('#createTicketReply input[type="file"]').val()==""){
+				// var newTicketReply = {
+		  //           description: $scope.description
+		  //       };
+				// dataFactory.insertTicketReply( newTicketReply )
+				// .success(function () {
+	   //              $modalInstance.close(newTicketReply);
+	   //          }).
+	   //          error(function(error) {
+	   //              $scope.status = 'Unable to insert ticket: ' + error.message;
+	   //          });
+			}
+
+		};
+
+		uploader.onCompleteAll = function(){
+			// var newTicketReply = {
+			// 	description: $scope.description
+			// };
+			// dataFactory.insertTicketReply( newTicketReply )
+			// .success(function () {
+			// 	$modalInstance.close(newTicketReply);
+			// }).
+			// error(function(error) {
+			// 	$scope.status = 'Unable to insert ticket: ' + error.message;
+			// });
 		};
 
 		$scope.cancel = function () {
@@ -115,45 +139,45 @@
 
 
 
-	cygnusApp.controller('storeTicketController', function($scope, $http, $rootScope, $modalInstance) {
-		$scope.submitTicket = function () {
-			var btn = $(this);
-			btn.button('loading');
+	cygnusApp.controller('storeTicketController', function($scope, $http, $rootScope, $modalInstance, FileUploader, dataFactory) {
+		
+		var uploader = $scope.uploader = new FileUploader({
+            url: '/api/upload'
+        });
+		
+		$scope.submit = function () {
+			if( $('#createTicket input[type="file"]').val()==""){
+				var newTicket = {
+		            title: $scope.title,
+		            description: $scope.description
+		        };
+				dataFactory.insertTicket( newTicket )
+				.success(function () {
+	                $modalInstance.close(newTicket);
+	            }).
+	            error(function(error) {
+	                $scope.status = 'Unable to insert ticket: ' + error.message;
+	            });
+			}
+		};
+		
 
-			$http({
-				method: 'post',
-				url: '/api/ticket',
-				data: { 'title': $('#createTicket #title').val() , 'description': $('#createTicket #description').val() }
-			}).success(function(data, status, headers, config) {
-				btn.button('reset');
-				$modalInstance.close();
-			}).error(function(data, status, headers, config) {
-				$('#createTicket #description').val(data);
+		uploader.onCompleteAll = function(){
+			var newTicket = {
+				title: $scope.title,
+				description: $scope.description
+			};
+			dataFactory.insertTicket( newTicket )
+			.success(function () {
+				$modalInstance.close(newTicket);
+			}).
+			error(function(error) {
+				$scope.status = 'Unable to insert ticket: ' + error.message;
 			});
 		};
 
 		$scope.cancel = function () {
 			$modalInstance.dismiss('cancel');
 		};
-	});
 
-
-	cygnusApp.controller('AppController', function($scope, $rootScope, FileUploader) {
-		//$('.fileupload').hide();
-		var params = {};
-		params['fileType'] = 'ticket';
-		var uploader = $scope.uploader = new FileUploader({
-            url: '/api/upload',
-            formData: params
-        });
-
-		uploader.onCompleteAll() = function(){
-			console.log('sss');
-		};
-        
-        // uploader.onAfterAddingFile = function(fileItem) {
-        //     $('.fileupload').show();
-        // };
-
-        $rootScope.$$phase || $rootScope.$apply();
 	});

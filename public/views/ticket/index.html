@@ -111,15 +111,15 @@
 	</div>
 
 
-	<div ng-app="cygnusApp">
-		<div ng-controller="AppController">
+	<div>
+		<div>
 			<div class="modal-body form-horizontal" id="createTicket">
 				<div class="form-group">
 					<label class="col-sm-3 control-label" style="text-align:right" for="title">Title</label>
 					<div class="col-sm-9">
 						<div class="input-group" style="width: 100%;" >
 							<span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr; width: 100%;">
-								<input type="text" id="title" name="title" class="form-control tt-input" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;" />
+								<input ng-model="title" type="text" id="title" name="title" class="form-control tt-input" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;" />
 							</span>
 						</div>
 					</div>
@@ -131,7 +131,7 @@
 					<div class="col-sm-9">
 						<div class="input-group" style="width: 100%;" >
 							<span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr; width: 100%;">
-								<textarea id="description" name="description" class="form-control tt-input" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"></textarea>
+								<textarea ng-model="description" id="description" name="description" class="form-control tt-input" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;"></textarea>
 							</span>
 						</div>
 					</div>
@@ -143,7 +143,7 @@
 					<div class="col-sm-9">
 
 
-								<input type="file" nv-file-select uploader="uploader"/><br/>
+								<input ng-model="file" type="file" nv-file-select uploader="uploader"/><br/>
 
 								<table class="table fileupload" ng-show="uploader.queue[0].file.name">
 									<thead>
@@ -167,9 +167,6 @@
 												</div>
 											</td>
 											<td nowrap>
-												<button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
-													<span class="glyphicon glyphicon-upload"></span> Upload
-												</button>
 												<button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
 													<span class="glyphicon glyphicon-trash"></span> Remove
 												</button>
@@ -183,7 +180,7 @@
 
 			</div>
 			<div class="modal-footer">
-				<button class="btn btn-primary" ng-click="uploader.uploadAll()" data-loading-text="submitting">submit</button>
+				<button class="btn btn-primary" ng-click="uploader.uploadAll(); submit() " data-loading-text="submitting">submit</button>
 				<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
 			</div>
 
