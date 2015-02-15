@@ -18,6 +18,11 @@ use Cygnus\Repo\User\User;
 class CondoRepo implements CondoRepoInterface
 {
 
+    
+
+
+
+
     /**
      * Register a New Condo
      *
@@ -84,7 +89,8 @@ class CondoRepo implements CondoRepoInterface
 
 
     public static function getCondoByName($condoName) {
-        $condo = Condominium::where('name', $condoName)->firstOrFail();
+        $condo = Condominium::where('name', $condoName)->first();
+        if($condo ?: \App::abort(404));
         return $condo->toJson();
     }
 

@@ -63,12 +63,11 @@ App::error(function(Illuminate\Database\Eloquent\ModelNotFoundException $excepti
 	return Cygnus\Core\CygnusResponse::sendJsonMessage('no result',400);
 });
 
-App::error(function(Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException $exception, $code)
+
+App::missing(function($exception)
 {
 	return Cygnus\Core\CygnusResponse::sendJsonMessage('Not Found',404);
 });
-
-
 
 /*
 |--------------------------------------------------------------------------

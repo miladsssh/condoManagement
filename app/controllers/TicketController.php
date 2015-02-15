@@ -64,7 +64,8 @@ class TicketController extends \BaseController {
 		$input = array_add(Input::get(), 'userId', Auth::id());
 		$input = array_add($input, 'condoId', json_decode(Session::get('app.condo')[0])->id);
 		$this->ticketReplyValidation->validate( Input::all() );
-		$this->execute(TicketReplyCommand::class, $input);
+		$lastTicketId = $this->execute(TicketReplyCommand::class, $input);
+		App::make('HelperController')->uploadFileFinalize($lastTicketId);
 		return $this->sendJsonMessage('success',200);
 	}
 

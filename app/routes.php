@@ -13,6 +13,8 @@
 
 
 
+
+
 Route::group(array('domain' => 'condoapp.my'), function()
 {
 	Route::get('/', function() {
@@ -22,6 +24,7 @@ Route::group(array('domain' => 'condoapp.my'), function()
 
 
 Route::group(array( 'domain' => '{condoName}.condoapp.my' , 'before'=>'verifyCondoName'), function($condoName) {
+
 
 	Route::get ('/', array('as'=>'home', 'uses'=>'HomeController@showWelcome'));
 
