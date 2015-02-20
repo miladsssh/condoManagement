@@ -26,5 +26,8 @@ class Ticket extends Eloquent{
         return $this->belongsTo('Cygnus\Repo\User\User');
     }
 
+    public function attachment(){
+        return $this->hasMany('Cygnus\Repo\Upload\Upload', 'file_reference_id');
+    }
     
 }

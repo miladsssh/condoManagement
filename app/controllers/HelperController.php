@@ -17,7 +17,6 @@ class HelperController extends BaseController{
 
     public function uploadFile()
     {
-        dd(Input::all());
         if ( Input::hasFile('file') ) {
             $oldName = Input::file('file')->getClientOriginalName();
             $newFileName = Str::random(10).'.'.Input::file('file')->getClientOriginalExtension();
@@ -31,7 +30,6 @@ class HelperController extends BaseController{
 
     public function uploadFileFinalize($ticketId)
     {
-        dd(Session::get('app'));
         if(Session::get('app.uploadedFile')) {
             foreach(Session::get('app.uploadedFile') as $files):
                 $input = array_add(Input::get(), 'filePath', $files[0]);
