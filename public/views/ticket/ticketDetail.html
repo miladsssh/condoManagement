@@ -81,6 +81,9 @@
 						<p style="text-indent: 30px; text-align: justify;">
 							{{ticket.description}} 
 						</p>
+						<a class="pull-left" target="_blank" href="/uploadedFiles/{{img.file_path}}" ng-repeat="img in ticket.attachment">
+							<img ng-src="/uploadedFiles/{{img.file_path}}" style="width: 64px; height: 64px; padding: 0px 5px 0px 0px;">
+						</a>
 					</div>
 				</div>
 			</div>
@@ -95,10 +98,20 @@
 
 
 
-<script type="text/ng-template" id="/newTicketModal.html">
+<script type="text/ng-template" id="/newTicketReplyModal.html">
 	<div class="modal-header"> 
 		<h3 class="modal-title">Reply Ticket</h3>
 	</div>
+
+	<div class="alert alert-danger alert-dismissable" id="createTicketReplyAlert" style="display:none" >
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+		<ul ng-repeat="error in errors">
+			<li ng-if="error.description" >
+				{{error.description[0]}}
+			</li>
+		</ul>
+	</div>
+
 	<div class="modal-body form-horizontal" id="createReplyTicket">
 		<div class="form-group">
 			<label class="col-sm-3 control-label" style="text-align:right" for="description">Description</label>
@@ -151,7 +164,7 @@
 
 	</div>
 	<div class="modal-footer">
-		<button class="btn btn-primary" ng-click="submitReplyTicket()" data-loading-text="submitting">submit</button>
+		<button class="btn btn-primary" ng-click="uploader.uploadAll(); submitReplyTicket()" data-loading-text="submitting">submit</button>
 		<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
 	</div>
 </script>

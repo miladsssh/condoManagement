@@ -110,6 +110,17 @@
 		<h3 class="modal-title">New Ticket</h3>
 	</div>
 
+	<div class="alert alert-danger alert-dismissable" id="createTicketAlert" style="display:none" >
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+		<ul ng-repeat="error in errors">
+			<li ng-if="error.title" >
+				{{error.title[0]}}
+			</li>
+			<li ng-if="error.description" >
+				{{error.description[0]}}
+			</li>
+		</ul>
+	</div>
 
 	<div>
 		<div>

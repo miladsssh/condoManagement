@@ -43,8 +43,9 @@
 		dataFactory.getTicket($routeParams.id)
 		.success(function (data) {
 			$scope.tickets = data ;
-			$scope.ticketTitle = data[0].title ;
+			$scope.ticketTitle = data[data.length-1].title ;
 			$scope.userID = data[0].user_id ;
+			console.log(data);
 		})
 		.error(function (error) {
 	        //  $scope.status = 'Unable to load customer data: ' + error.message;
@@ -53,7 +54,7 @@
 
 		$scope.open = function (size) {
 			var modalInstance = $modal.open({
-				templateUrl: '/newTicketModal.html',
+				templateUrl: '/newTicketReplyModal.html',
 				controller: 'storeReplyTicketController',
 				size: size,
 				resolve: {
@@ -91,44 +92,37 @@
 			var btn = $(this);
 			btn.button('loading');
 
-			$http({
-				method: 'post',
-				url: '/api/ticket/reply',
-				data: { 'batchId': $routeParams.id , 'description': $('#createReplyTicket #description').val() }
-			}).success(function(data, status, headers, config) {
-				$rootScope.$$phase || $rootScope.$apply();
-				btn.button('reset');
-				$modalInstance.close();
-			}).error(function(data, status, headers, config) {
-				$('#createReplyTicket #description').val(data);
-			});
-
-			if( $('#createTicketReply input[type="file"]').val()==""){
-				// var newTicketReply = {
-		  //           description: $scope.description
-		  //       };
-				// dataFactory.insertTicketReply( newTicketReply )
-				// .success(function () {
-	   //              $modalInstance.close(newTicketReply);
-	   //          }).
-	   //          error(function(error) {
-	   //              $scope.status = 'Unable to insert ticket: ' + error.message;
-	   //          });
+			if( $('#createReplyTicket input[type="file"]').val()==""){
+				var newTicketReply = {
+		            title: '',
+					description: $scope.description,
+					batchId: $routeParams.id
+		        };
+				dataFactory.insertTicketReply( newTicketReply )
+				.success(function () {
+	                $modalInstance.close(newTicketReply);
+	            }).
+	            error(function(error) {
+	                $('#createTicketReplyAlert').show();
+	            	$scope.errors = error;
+	            });
 			}
 
 		};
 
 		uploader.onCompleteAll = function(){
-			// var newTicketReply = {
-			// 	description: $scope.description
-			// };
-			// dataFactory.insertTicketReply( newTicketReply )
-			// .success(function () {
-			// 	$modalInstance.close(newTicketReply);
-			// }).
-			// error(function(error) {
-			// 	$scope.status = 'Unable to insert ticket: ' + error.message;
-			// });
+			var newTicketReply = {
+				title: '',
+				description: $scope.description,
+				batchId: $routeParams.id
+			};
+			dataFactory.insertTicketReply( newTicketReply )
+			.success(function () {
+				$modalInstance.close(newTicketReply);
+			}).
+			error(function(error) {
+				$scope.status = 'Unable to insert ticket: ' + error.message;
+			});
 		};
 
 		$scope.cancel = function () {
@@ -156,7 +150,8 @@
 	                $modalInstance.close(newTicket);
 	            }).
 	            error(function(error) {
-	                $scope.status = 'Unable to insert ticket: ' + error.message;
+	            	$('#createTicketAlert').show();
+	                $scope.errors = error;
 	            });
 			}
 		};

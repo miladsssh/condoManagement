@@ -16,7 +16,7 @@
         };
 
         dataFactory.insertTicketReply = function (newTicketReply) {
-            return $http.post('/api/ticket', newTicketReply );
+            return $http.post('/api/ticket/reply', newTicketReply );
         };
 
         // dataFactory.updateCustomer = function (cust) {
