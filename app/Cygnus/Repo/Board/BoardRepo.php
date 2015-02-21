@@ -19,9 +19,9 @@ class BoardRepo {
         $this->board = $board;
     }
 
-    public function save()
+    public function save(Board $board)
     {
-        $this->board->save();
+        $board->save();
     }
 
 

@@ -132,7 +132,6 @@
 
 
 
-
 	cygnusApp.controller('storeTicketController', function($scope, $http, $rootScope, $modalInstance, FileUploader, dataFactory) {
 		
 		var uploader = $scope.uploader = new FileUploader({

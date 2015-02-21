@@ -25,56 +25,126 @@
 			<div class="portlet-title">
 				<div class="caption">
 					<i class="icon-share font-blue-steel hide"></i>
-					<span class="caption-subject font-blue-steel bold uppercase">List of Latest News</span>
+					<span class="caption-subject font-blue-steel bold uppercase">List of Board Items</span>
 				</div>
 				<div class="actions">
 					<div class="btn-group">
-						<a class="btn btn-sm btn-default btn-circle" href="#" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-							Filter By <i class="fa fa-angle-down"></i>
+						<a class="btn green-haze btn-circle btn-sm" ng-click="open()" href="" data-toggle="dropdown" dropdown-menu-hover="" data-close-others="true" aria-expanded="true">
+							<i class="fa fa-plus"></i> New Item 
 						</a>
-						<div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
-							<label><input type="checkbox"/> Finance</label>
-							<label><input type="checkbox" checked=""/> Membership</label>
-							<label><input type="checkbox"/> Customer Support</label>
-							<label><input type="checkbox" checked=""/> HR</label>
-							<label><input type="checkbox"/> System</label>
-						</div>
 					</div>
 				</div>
 			</div>
+
 			<div class="portlet-body">
-				<div class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible="0">
-					<ul class="feeds">
-						<li>
-							<div class="col1">
-								<div class="cont">
-									<div class="cont-col1">
-										<div class="label label-sm label-info">
-											<i class="fa fa-check"></i>
-										</div>
-									</div>
-									<div class="cont-col2">
-										<div class="desc">
-											You have 4 pending tasks. <span class="label label-sm label-warning ">
-											Take action <i class="fa fa-share"></i>
-										</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col2">
-							<div class="date">
-								Just now
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="scroller-footer">
-				<div class="btn-arrow-link pull-right">
-					
+				<div data-always-visible="1" data-rail-visible="0">
+					<table datatable="ng" class="row-border hover" id="boardsTable">
+						<thead>
+							<tr role="row">
+								<th class="sorting" tabindex="0" aria-controls="boardsTable" rowspan="1" colspan="1" aria-label="
+								Rendering engine : activate to sort column ascending" style="width: 175px;">
+								Title
+								</th>
+								<th class="sorting_asc" tabindex="0" aria-controls="boardsTable" rowspan="1" colspan="1" aria-label="
+									Browser : activate to sort column ascending" style="width: 224px;">
+									Description
+								</th>
+								<th style="">
+									Date/Time
+								</th>
+								<th style="width: 30px;">
+									Action
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr role="row" ng-repeat="item in boardItems" >
+								<td class="board-title">
+									<span class="board-title-sp">
+										{{item.title}} 
+									</span>
+								</td>
+								<td class="sorting_1">
+									<span class="board-description-sp" ng-bind-html="item.description | unsafe">
+										{{item.description }} 
+									</span>
+								</td>
+								<td class="sorting_1">
+									<span class="board-date-sp">
+										{{item.created_at}} 
+									</span>
+								</td>
+								<td>
+									<a ng-href="/panel/board/{{item.id}}" class="btn btn-xs default"><i class="fa fa-search"></i> View</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-			</div>
+				<div class="scroller-footer">
+					<div class="btn-arrow-link pull-right">
+						
+					</div>
+				</div>	
 			</div>
 		</div>
 	</div>
+
+<style type="text/css">
+	.dropdown-menu{width: 330px !important; }
+	.note-editable{ height: 155px !important; }
+</style>
+
+<script type="text/ng-template" id="/newBoardModal.html">
+	<div class="modal-header"> 
+		<h3 class="modal-title">New Board</h3>
+	</div>
+
+	<div class="alert alert-danger alert-dismissable" id="createBoardAlert" style="display:none" >
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+		<ul ng-repeat="error in errors">
+			<li ng-if="error.title" >
+				{{error.title[0]}}
+			</li>
+			<li ng-if="error.description" >
+				{{error.description[0]}}
+			</li>
+		</ul>
+	</div>
+
+	<div>
+		<div>
+			<div class="modal-body form-horizontal" id="createBoard">
+				<div class="form-group">
+					<label class="col-sm-3 control-label" style="text-align:right" for="title">Title</label>
+					<div class="col-sm-9">
+						<div class="input-group" style="width: 100%;" >
+							<span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr; width: 100%;">
+								<input ng-model="title" type="text" id="title" name="title" class="form-control tt-input" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;" />
+							</span>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label" style="text-align:right" for="description">Description</label>
+					<div class="col-sm-9">
+						<div class="input-group" style="width: 100%;" >
+							<span class="twitter-typeahead" style="position: relative; display: inline-block; direction: ltr; width: 100%;">
+								<div id="description" ng-model="description" name="description" class="form-control tt-input" autocomplete="off"></div>
+							</span>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" ng-click="submit() " data-loading-text="submitting">submit</button>
+				<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+			</div>
+
+		</div>
+	</div>
+</script>
