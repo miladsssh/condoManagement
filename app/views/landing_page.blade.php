@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0037) -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +8,19 @@
     <link rel="shortcut icon" href="http://mythemes.esy.es/nyx/img/favicon.png">
     <!-- css -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href="../../css/first/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://mythemes.esy.es/nyx/css/nivo-lightbox.css" rel="stylesheet">
+    <link href="../../css/first/nivo-lightbox.css" rel="stylesheet">
     <link href="../../css/first/default.css" rel="stylesheet" type="text/css">
-    <link href="http://mythemes.esy.es/nyx/css/animations.css" rel="stylesheet">
-    <link href="http://mythemes.esy.es/nyx/css/style.css" rel="stylesheet">
-    <link href="http://mythemes.esy.es/nyx/color/blue.css" rel="stylesheet">
+    <link href="../../css/first/animations.css" rel="stylesheet">
+    <link href="../../css/first/style.css" rel="stylesheet">
+    <link href="../../css/first/blue.css" rel="stylesheet">
   </head>
   
   <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+    <div class="bg-pattern bg-pattern_vertical"></div>
     <section class="hero" id="intro">
       <div class="container">
         <div class="row">
@@ -28,7 +31,7 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2 text-center inner">
             <div class="animatedParent">
-              <h1 class="animated fadeInDown go"><i class="fa fa-moon-o"></i>Condo Management</h1>
+              <h1 class="animated fadeInDown go">Condo <span class="land-title">Management</span></h1>
               <p class="animated fadeInUp go">Unpleasant nor diminution excellence apartments imprudence the met new</p>
             </div>
           </div>
@@ -65,8 +68,6 @@
                 <ul class="nav navbar-nav navbar-right">
                   <li class="active"><a href=" #about">About Us</a></li>
                   <li class=""><a href="#service">Services</a></li>
-                  <li class=""><a href="#works">Portfolio</a></li>		
-                  <li class=""><a href="#team">Team</a></li>                                                                  
                   <li class=""><a href="#contact">Contact</a></li>
                 </ul>
               </div>
@@ -191,139 +192,7 @@
     </section>
     <!-- /Section: services -->
 
-    <!-- Section: works -->
-    <section id="works" class="home-section color-dark text-center bg-white">
-      <div class="container marginbot-50">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-          <div>
-            <div class="animatedParent">
-              <div class="section-heading text-center animated bounceInDown">
-                <h2 class="h-bold">Our latest work</h2>
-                <hr class="star-light star-light-work">
-              </div>
-            </div>
-          </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row animatedParent">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="row gallery-item">
-              <div class="col-md-3 animated fadeInUp">
-                <a href="../../img/first/6.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/6.jpg">
-                <img src="../../img/first/6.jpg" class="img-responsive" alt="img">
-                </a>
-              </div>
-              <div class="col-md-3 animated fadeInUp slow">
-                <a href="./NYX - One Page bootstrap theme._files/7.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/7.jpg">
-                <img src="../../img/first/7.jpg" class="img-responsive" alt="img">
-                </a>
-              </div>
-              <div class="col-md-3 animated fadeInUp slower">
-                <a href="./NYX - One Page bootstrap theme._files/8.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/8.jpg">
-                <img src="../../img/first/8.jpg" class="img-responsive" alt="img">
-                </a>
-              </div>
-              <div class="col-md-3 animated fadeInUp">
-                <a href="./NYX - One Page bootstrap theme._files/9.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/9.jpg">
-                <img src="../../img/first/9.jpg" class="img-responsive" alt="img">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>	
-        <div class="row animatedParent margin-top-20">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="row gallery-item">
-              <div class="col-md-3 animated fadeInDown">
-                <a href="./NYX - One Page bootstrap theme._files/6.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/6.jpg">
-                <img src="../../img/first/6.jpg" class="img-responsive" alt="img">
-                </a>
-              </div>
-              <div class="col-md-3 animated fadeInDown slow">
-                <a href="./NYX - One Page bootstrap theme._files/7.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/7.jpg">
-                <img src="../../img/first/7.jpg" class="img-responsive" alt="img">
-                </a>
-              </div>
-              <div class="col-md-3 animated fadeInDown slower">
-                <a href="./NYX - One Page bootstrap theme._files/8.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/8.jpg">
-                <img src="../../img/first/8.jpg" class="img-responsive" alt="img">
-                </a>
-              </div>
-              <div class="col-md-3 animated fadeInDown">
-                <a href="./NYX - One Page bootstrap theme._files/9.jpg" title="This is an image title" data-lightbox-gallery="gallery1" data-lightbox-hidpi="img/9.jpg">
-                <img src="../../img/first/9.jpg" class="img-responsive" alt="img">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Section: works -->
-    
-    <!-- Section: team -->
-    <section id="team" class="home-section color-dark text-center bg-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div>
-              <div class="animatedParent">
-                <div class="section-heading text-center animated bounceInDown">
-                  <h2 class="h-bold">Meet our team</h2>
-                  <hr class="star-light star-light-team">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 animatedParent">		
-            <div class="text-center">
-              <p>
-                Uneasy barton seeing remark happen his has. 
-                Am possible offering at contempt mr distance stronger an. 
-                Attachment excellence announcing or reasonable am on if indulgence. Exeter talked in agreed spirit no he unable do. 
-              </p>
-            </div>
-          </div>
-        </div>		
-      </div>
-      <div class="container">
-        <div class="row animatedParent">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="row gallery-item">
-              <div class="col-md-3 animated fadeInUp">
-                <a href="./NYX - One Page bootstrap theme._files/p1.jpg" title="This is an image title" data-lightbox-gallery="gallery2" data-lightbox-hidpi="img/p1.jpg">
-                <img src="../../img/first/p1.jpg" class="img-thumbnail img-responsive" alt="img">
-                </a>
-              </div>
-              <div class="col-md-3 animated fadeInUp">
-                <a href="./NYX - One Page bootstrap theme._files/p2.jpg" title="This is an image title" data-lightbox-gallery="gallery2" data-lightbox-hidpi="img/p2.jpg">
-                <img src="../../img/first/p2.jpg" class="img-thumbnail img-responsive" alt="img">
-                </a>
-              </div>
-              <div class="col-md-3 animated fadeInUp">
-                <a href="./NYX - One Page bootstrap theme._files/p3.jpg" title="This is an image title" data-lightbox-gallery="gallery2" data-lightbox-hidpi="img/p3.jpg">
-                <img src="../../img/first/p3.jpg" class="img-thumbnail img-responsive" alt="img">
-                </a>
-              </div>
-              <div class="col-md-3 animated fadeInUp">
-                <a href="./NYX - One Page bootstrap theme._files/p4.jpg" title="This is an image title" data-lightbox-gallery="gallery2" data-lightbox-hidpi="img/p4.jpg">
-                <img src="../../img/first/p4.jpg" class="img-thumbnail img-responsive" alt="img">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /Section: team -->
-    
+
     <!-- Section: contact -->
     <section id="contact" class="home-section nopadd-bot color-dark bg-white text-center">
       <div class="container marginbot-50">
