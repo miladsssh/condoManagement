@@ -58,7 +58,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr role="row" ng-repeat="item in boardItems" >
+							<tr role="row" ng-repeat="item in boardItems | orderBy: 'id':true" >
 								<td class="board-title">
 									<span class="board-title-sp">
 										{{item.title}} 

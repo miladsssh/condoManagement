@@ -105,14 +105,14 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr role="row" ng-repeat="item in boardItems" >
+							<tr role="row" ng-repeat="item in boardItems | orderBy: 'id':true | limitTo: 6 " >
 								<td class="board-title">
 									<span class="board-title-sp">
 										{{item.title}} 
 									</span>
 								</td>
 								<td class="sorting_1">
-									<span class="board-description-sp">
+									<span class="board-description-sp" ng-bind-html="item.description | unsafe">
 										{{item.description | limitTo : 35}} 
 									</span>
 								</td>

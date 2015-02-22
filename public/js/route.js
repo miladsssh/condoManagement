@@ -18,8 +18,13 @@
 		.when('/panel/board' , {
 			  controller:  'boardController',
 			  templateUrl: '/views/board/index.html'
-		});
+		})
 
+		.when('/panel/board/:id' , {
+			  controller:  'boardDetailController',
+			  templateUrl: '/views/board/boardDetail.html'
+		});
+		
 		// .otherwise({
 	 //        redirectTo: '/'
 	 //    });

@@ -1,0 +1,52 @@
+<!-- BEGIN PAGE HEADER-->
+	<div class="col-sm-12">
+		<h3 class="page-title">Board</h3>
+		<div class="page-bar">
+			<ul class="page-breadcrumb">
+				<li>
+					<i class="fa fa-home"></i>
+					<a href="/panel/index">Home</a>
+					<i class="fa fa-angle-right"></i>
+				</li>
+				<li>
+					<a href="/panel/board">Board</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+<!-- END PAGE HEADER-->
+
+	<div class="clearfix">
+	</div>
+
+
+<div class="col-sm-12">
+	<div class="portlet light">
+		<div class="portlet-title">
+			<div class="caption">
+				<i class="icon-share font-green-haze hide"></i>
+				<span class="caption-subject font-green-haze bold uppercase">{{boardItem.title}}</span>
+			</div>
+			<div class="actions">
+
+			</div>
+		</div>
+		<div class="portlet-body">
+			<div data-always-visible="1" data-rail-visible="0">
+				<div class="row board-item">
+
+					<div class="col-sm-12" style="padding-top: 15px;">
+						<p style="text-indent: 30px; text-align: justify;" ng-bind-html="boardItem.description | unsafe">
+							{{boardItem.description}} 
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="scroller-footer">
+				<div class="btn-arrow-link pull-right">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

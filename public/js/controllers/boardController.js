@@ -47,21 +47,7 @@
 			});
 		};
 
-		// $(document).ready(function() {
-  //     		$('.summernote').summernote({
-	 //        height: 200,
-	 //        tabsize: 2,
-	 //        codemirror: {
-	 //          theme: 'monokai'
-	 //        }
-	 //      });
-	 //    });
-
-
-
 	});
-
-
 
 	cygnusApp.controller('storeBoardController', function($scope, $http, $rootScope, $modalInstance, FileUploader, boardModel) {
 		
@@ -85,4 +71,18 @@
 		$scope.cancel = function () {
 			$modalInstance.dismiss('cancel');
 		};
+	});
+
+
+	cygnusApp.controller('boardDetailController', function($scope, $modal, $http, $routeParams, $rootScope, boardModel) {	
+		$('.start').removeClass('active');
+		$('.boardMenu').addClass('active');
+
+		boardModel.getBoardItem($routeParams.id)
+		.success(function (data) {
+			$scope.boardItem = data ;
+		})
+		.error(function (error) {
+	        //  $scope.status = 'Unable to load customer data: ' + error.message;
+	    });
 	});

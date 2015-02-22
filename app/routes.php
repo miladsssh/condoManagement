@@ -59,6 +59,10 @@ Route::group(array( 'domain' => '{condoName}.condoapp.my' , 'before'=>'verifyCon
 			return View::make('tenant');
 		});
 
+		Route::get('board/{id}', function(){
+			return View::make('tenant');
+		});
+
 	});
 
 });
