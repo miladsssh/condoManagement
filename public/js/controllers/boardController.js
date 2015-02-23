@@ -78,6 +78,8 @@
 		$('.start').removeClass('active');
 		$('.boardMenu').addClass('active');
 
+		$scope.pageid = $routeParams.id;
+
 		boardModel.getBoardItem($routeParams.id)
 		.success(function (data) {
 			$scope.boardItem = data ;

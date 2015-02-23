@@ -53,7 +53,7 @@
           <div class="row">
             <div class="col-md-2">
               <div class="site-logo">
-                <a href="#intro" class="brand"><i class="fa fa-moon-o"></i> NYX</a>
+                <a href="#intro" class="brand"><i class="fa fa-moon-o"></i> Condo</a>
               </div>
             </div>
             <div class="col-md-10">
@@ -69,6 +69,7 @@
                   <li class="active"><a href=" #about">About Us</a></li>
                   <li class=""><a href="#service">Services</a></li>
                   <li class=""><a href="#contact">Contact</a></li>
+                  <li class=""><a href="#signup">Sign up</a></li>
                 </ul>
               </div>
             <!-- /.Navbar-collapse -->
@@ -87,7 +88,7 @@
           <div class="col-lg-8 col-lg-offset-2">
             <div class="animatedParent">
               <div class="section-heading text-center animated bounceInDown">
-                <h2 class="h-bold">About NYX</h2>
+                <h2 class="h-bold">About CondoApp</h2>
                 <hr class="star-light star-light-about">
               </div>
             </div>
@@ -247,7 +248,7 @@
             </ul>
           </div>
           <div class="col-md-6 text-right">
-            <p>©Copyright 2014 - Nyx. Designed by <a href="#">NYX</a></p>
+            <p>©Copyright 2015 - Condo. Designed by <a href="#">Cygnuslab</a></p>
           </div>
         </div>	
       </div>
